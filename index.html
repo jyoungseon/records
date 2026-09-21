@@ -1022,6 +1022,9 @@ filteredArticles=
 
 allArticles.filter(
 article=>{
+  if (article.showInArticles === false) {
+  return false;
+}
 
 
 const matchesCategory=
