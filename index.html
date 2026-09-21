@@ -1018,47 +1018,33 @@ filterArticles();
 
 function filterArticles(){
 
-filteredArticles=
+  filteredArticles = allArticles.filter(article => {
 
-allArticles.filter(
-article=>{
-  if (article.showInArticles === false) {
-  return false;
-}
+    if (article.showInArticles === false) {
+      return false;
+    }
 
+    const matchesCategory =
+      currentCategory === "All" ||
+      article.category === currentCategory;
 
-const matchesCategory=
+    const searchableText = [
+      article.title,
+      article.description,
+      article.outlet,
+      article.category,
+      ...(article.tags || [])
+    ]
+      .join(" ")
+      .toLowerCase();
 
-currentCategory==="All" ||
-article.category===currentCategory;
+    return (
+      matchesCategory &&
+      searchableText.includes(currentSearch)
+    );
+  });
 
-
-const searchableText=
-
-[
-article.title,
-article.description,
-article.outlet,
-article.category,
-...(article.tags||[])
-]
-.join(" ")
-.toLowerCase();
-
-
-return
-matchesCategory &&
-searchableText.includes(
-currentSearch
-);
-
-}
-
-);
-
-
-renderArticles();
-
+  renderArticles();
 }
 
 
