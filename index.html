@@ -1,54 +1,16 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Youngseon Jung | Journalist</title>
+  <title>Youngseon Jung — Journalist</title>
   <meta
     name="description"
-    content="Youngseon Jung — Journalist Portfolio"
-  >
+    content="Youngseon Jung — Journalist and researcher covering Korea, international affairs, business and society."
+  />
 
   <style>
-    /* =========================
-       RESET
-    ========================= */
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f5f3ef;
-      color: #151515;
-      line-height: 1.6;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    button,
-    input {
-      font: inherit;
-    }
-
-
-    /* =========================
-       VARIABLES
-    ========================= */
-
     :root {
       --black: #111;
       --paper: #f5f3ef;
@@ -59,1559 +21,1239 @@
       --max-width: 1240px;
     }
 
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-    /* =========================
-       COMMON
-    ========================= */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--paper);
+      color: var(--black);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+
+    button,
+    input {
+      font: inherit;
+    }
 
     .container {
-      width: min(
-        var(--max-width),
-        calc(100% - 48px)
-      );
-
+      width: min(100% - 48px, var(--max-width));
       margin: 0 auto;
     }
 
-    section {
-      padding: 110px 0;
-      border-bottom: 1px solid var(--light-gray);
-    }
-
-    .section-label {
-      margin-bottom: 22px;
-
-      color: var(--red);
-
-      font-size: 11px;
-      font-weight: 700;
-
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-    }
-
-    .section-title {
-      font-family: Georgia, "Times New Roman", serif;
-
-      font-size: clamp(48px, 7vw, 82px);
-      font-weight: 400;
-
-      line-height: 0.95;
-      letter-spacing: -0.055em;
-    }
-
-
-    /* =========================
-       HEADER
-    ========================= */
-
+    /* Header */
     header {
       position: sticky;
       top: 0;
-      z-index: 100;
-
-      background: rgba(245, 243, 239, 0.95);
-      backdrop-filter: blur(10px);
-
+      z-index: 1000;
+      background: rgba(245, 243, 239, 0.96);
       border-bottom: 1px solid var(--light-gray);
+      backdrop-filter: blur(8px);
     }
 
     .nav {
-      height: 72px;
-
+      min-height: 72px;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 32px;
     }
 
-    .logo {
-      font-size: 15px;
+    .brand {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 22px;
       font-weight: 700;
-      letter-spacing: -0.02em;
+      letter-spacing: -0.03em;
     }
 
     .nav-links {
       display: flex;
+      align-items: center;
       gap: 28px;
-
-      list-style: none;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
     }
 
     .nav-links a {
-      font-size: 12px;
-      font-weight: 600;
-
-      transition: color 0.2s ease;
+      transition: opacity 0.2s ease;
     }
 
     .nav-links a:hover {
-      color: var(--red);
+      opacity: 0.55;
     }
 
-
-    /* =========================
-       HERO
-    ========================= */
-
+    /* Hero */
     .hero {
       min-height: calc(100vh - 72px);
-
       display: flex;
       align-items: center;
+      border-bottom: 1px solid var(--light-gray);
+      padding: 96px 0;
     }
 
-    .hero-grid {
-      display: grid;
-
-      grid-template-columns: 1.5fr 0.5fr;
-
-      gap: 80px;
-
-      align-items: end;
+    .hero-inner {
+      width: 100%;
     }
 
-    .hero-kicker {
-      margin-bottom: 28px;
-
+    .kicker {
+      margin-bottom: 22px;
       color: var(--red);
-
       font-size: 12px;
       font-weight: 700;
-
-      letter-spacing: 0.15em;
+      letter-spacing: 0.13em;
       text-transform: uppercase;
     }
 
     .hero h1 {
+      max-width: 920px;
       font-family: Georgia, "Times New Roman", serif;
-
-      font-size: clamp(72px, 11vw, 150px);
+      font-size: clamp(72px, 11vw, 155px);
+      line-height: 0.86;
       font-weight: 400;
-
-      line-height: 0.82;
-      letter-spacing: -0.075em;
+      letter-spacing: -0.065em;
     }
 
     .hero h1 span {
       display: block;
     }
 
+    .hero h1 span:last-child {
+      margin-left: 0.55em;
+    }
+
     .hero-description {
-      max-width: 390px;
-
-      font-family: Georgia, "Times New Roman", serif;
-
-      font-size: 21px;
-      line-height: 1.4;
+      max-width: 540px;
+      margin-top: 54px;
+      font-size: 18px;
+      line-height: 1.6;
     }
 
     .hero-meta {
-      margin-top: 28px;
-
-      color: var(--gray);
-
-      font-size: 12px;
-    }
-
-
-    /* =========================
-       ABOUT
-    ========================= */
-
-    .about-grid {
-      display: grid;
-
-      grid-template-columns: 0.7fr 1.3fr;
-
-      gap: 100px;
-
-      margin-top: 70px;
-    }
-
-    .about-text {
-      font-family: Georgia, "Times New Roman", serif;
-
-      font-size: clamp(25px, 3vw, 39px);
-      line-height: 1.25;
-
-      letter-spacing: -0.025em;
-    }
-
-    .about-side {
-      border-top: 1px solid var(--black);
-
-      padding-top: 18px;
-    }
-
-    .about-side p {
-      max-width: 600px;
-
-      color: #444;
-
-      font-size: 15px;
-    }
-
-    .about-side p + p {
-      margin-top: 18px;
-    }
-
-    .interests {
       display: flex;
       flex-wrap: wrap;
-
-      gap: 8px;
-
-      margin-top: 32px;
+      gap: 10px 24px;
+      margin-top: 26px;
+      color: var(--gray);
+      font-size: 12px;
+      letter-spacing: 0.04em;
     }
 
-    .interest {
-      padding: 7px 12px;
-
-      border: 1px solid #aaa;
-      border-radius: 999px;
-
-      font-size: 11px;
-    }
-
-
-    /* =========================
-       EDUCATION
-    ========================= */
-
-    .education-list {
-      margin-top: 70px;
-
-      border-top: 1px solid var(--black);
-    }
-
-    .education-item {
-      display: grid;
-
-      grid-template-columns: 0.7fr 1.3fr;
-
-      padding: 30px 0;
-
+    /* General sections */
+    section {
       border-bottom: 1px solid var(--light-gray);
     }
 
-    .education-date {
-      color: var(--gray);
+    .section {
+      padding: 110px 0;
+    }
 
-      font-size: 11px;
+    .section-heading {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      gap: 40px;
+      margin-bottom: 60px;
+    }
+
+    .section-number {
+      padding-top: 5px;
+      color: var(--red);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
     }
 
-    .education-school {
+    .section-title {
       font-family: Georgia, "Times New Roman", serif;
-
-      font-size: 28px;
-      line-height: 1.15;
+      font-size: clamp(38px, 5vw, 68px);
+      font-weight: 400;
+      line-height: 1;
+      letter-spacing: -0.04em;
     }
 
-    .education-detail {
-      margin-top: 8px;
+    /* About */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 80px;
+    }
 
-      color: #666;
+    .about-lead {
+      max-width: 760px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(26px, 3vw, 42px);
+      line-height: 1.28;
+      letter-spacing: -0.025em;
+    }
 
+    .about-text {
+      color: #444;
+      font-size: 15px;
+      line-height: 1.9;
+    }
+
+    .about-text p + p {
+      margin-top: 24px;
+    }
+
+    .interest-list {
+      margin-top: 34px;
+      border-top: 1px solid var(--light-gray);
+    }
+
+    .interest-item {
+      padding: 14px 0;
+      border-bottom: 1px solid var(--light-gray);
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      font-size: 13px;
+    }
+
+    .interest-item span:last-child {
+      color: var(--gray);
+      text-align: right;
+    }
+
+    /* Education */
+    .timeline {
+      border-top: 1px solid var(--light-gray);
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 170px 1fr;
+      gap: 40px;
+      padding: 28px 0;
+      border-bottom: 1px solid var(--light-gray);
+    }
+
+    .timeline-date {
+      color: var(--gray);
+      font-size: 13px;
+    }
+
+    .timeline-main h3 {
+      margin-bottom: 8px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 25px;
+      font-weight: 400;
+      line-height: 1.25;
+    }
+
+    .timeline-main p {
+      color: #555;
       font-size: 14px;
     }
 
-
-    /* =========================
-       EXPERIENCE
-    ========================= */
-
+    /* Experience */
     .experience-list {
-      margin-top: 70px;
-
-      border-top: 1px solid var(--black);
+      border-top: 1px solid var(--light-gray);
     }
 
     .experience-item {
       display: grid;
-
-      grid-template-columns: 0.7fr 1.3fr;
-
-      gap: 40px;
-
-      padding: 32px 0;
-
+      grid-template-columns: 170px 180px 1fr;
+      gap: 30px;
+      padding: 30px 0;
       border-bottom: 1px solid var(--light-gray);
     }
 
     .experience-date {
       color: var(--gray);
-
-      font-size: 11px;
-      text-transform: uppercase;
+      font-size: 13px;
     }
 
-    .experience-title {
-      font-family: Georgia, "Times New Roman", serif;
-
-      font-size: 29px;
-      line-height: 1.15;
-    }
-
-    .experience-org {
-      margin-top: 7px;
-
+    .experience-role {
       font-size: 14px;
       font-weight: 700;
     }
 
     .experience-description {
-      max-width: 700px;
+      color: #444;
+      font-size: 14px;
+      line-height: 1.8;
+    }
 
-      margin-top: 12px;
+    /* Selected Work */
+    .selected-work {
+      background: var(--black);
+      color: var(--white);
+      border-bottom-color: var(--black);
+    }
 
-      color: #666;
+    .selected-work .section-number {
+      color: #e16b6b;
+    }
 
+    .selected-work .section-title {
+      color: var(--white);
+    }
+
+    .selected-intro {
+      max-width: 680px;
+      margin-top: -20px;
+      margin-left: 190px;
+      margin-bottom: 52px;
+      color: #bdbdbd;
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .selected-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .selected-card {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      background: #1b1b1b;
+      border: 1px solid #303030;
+      transition:
+        transform 0.25s ease,
+        border-color 0.25s ease;
+    }
+
+    .selected-card:hover {
+      transform: translateY(-4px);
+      border-color: #555;
+    }
+
+    .selected-image {
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+      background: #262626;
+    }
+
+    .selected-image img {
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .selected-image.placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #707070;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .selected-content {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      padding: 24px;
+    }
+
+    .selected-meta {
+      margin-bottom: 13px;
+      color: #989898;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .selected-card h3 {
+      margin-bottom: 15px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 27px;
+      font-weight: 400;
+      line-height: 1.18;
+      letter-spacing: -0.02em;
+    }
+
+    .selected-card p {
+      margin-bottom: 24px;
+      color: #bdbdbd;
+      font-size: 13px;
+      line-height: 1.75;
+    }
+
+    .selected-link {
+      margin-top: auto;
+      color: var(--white);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .selected-link:hover {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    .selected-empty {
+      grid-column: 1 / -1;
+      padding: 30px 0;
+      color: #999;
       font-size: 14px;
     }
 
-
-    /* =========================
-       ARTICLES
-    ========================= */
-
-    .articles-header {
-      display: flex;
-
-      align-items: flex-end;
-      justify-content: space-between;
-
-      gap: 30px;
-    }
-
-    .article-count {
-      color: var(--gray);
-
-      font-size: 12px;
-
-      white-space: nowrap;
-    }
-
-
-    /* SEARCH */
-
+    /* Articles */
     .article-controls {
-      display: flex;
-      flex-direction: column;
-
-      gap: 20px;
-
-      margin-top: 60px;
+      display: grid;
+      grid-template-columns: minmax(280px, 1fr) auto;
+      gap: 24px;
+      align-items: end;
+      margin-bottom: 36px;
     }
 
-    .search-box input {
+    .search-wrap label {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--gray);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .search-input {
       width: 100%;
-      height: 58px;
-
-      padding: 0 5px;
-
+      padding: 14px 0;
       background: transparent;
-
       border: 0;
       border-bottom: 1px solid var(--black);
-
+      border-radius: 0;
       outline: none;
-
-      font-size: 17px;
+      font-size: 16px;
     }
-
-    .search-box input::placeholder {
-      color: #999;
-    }
-
-
-    /* CATEGORY */
 
     .category-list {
       display: flex;
       flex-wrap: wrap;
-
       gap: 8px;
+      justify-content: flex-end;
     }
 
-    .category-btn {
-      padding: 8px 15px;
-
+    .category-button {
+      padding: 9px 13px;
       background: transparent;
-
-      border: 1px solid #aaa;
-      border-radius: 999px;
-
+      border: 1px solid var(--light-gray);
       cursor: pointer;
-
       font-size: 11px;
-
-      transition: 0.2s ease;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
     }
 
-    .category-btn:hover,
-    .category-btn.active {
+    .category-button:hover,
+    .category-button.active {
       background: var(--black);
-      color: var(--white);
-
       border-color: var(--black);
+      color: var(--white);
     }
 
-
-    /* ARTICLE LIST */
-
-    .articles-list {
-      margin-top: 45px;
-
+    .article-list {
       border-top: 1px solid var(--black);
     }
 
     .article-card {
       display: grid;
-
-      grid-template-columns: 60px 1fr 170px;
-
-      gap: 30px;
-
-      padding: 30px 0;
-
+      grid-template-columns: 95px minmax(0, 1fr) 160px;
+      gap: 28px;
+      padding: 27px 0;
       border-bottom: 1px solid var(--light-gray);
-
-      transition: padding 0.2s ease;
+      align-items: start;
     }
 
-    .article-card:hover {
-      padding-left: 8px;
-      padding-right: 8px;
+    .article-index {
+      color: var(--gray);
+      font-size: 12px;
+      letter-spacing: 0.08em;
     }
 
-    .article-number {
-      color: #999;
-
+    .article-main h3 {
+      margin-bottom: 8px;
       font-family: Georgia, "Times New Roman", serif;
-
-      font-size: 18px;
-    }
-
-    .article-category {
-      margin-bottom: 7px;
-
-      color: var(--red);
-
-      font-size: 10px;
-      font-weight: 700;
-
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-
-    .article-title {
-      font-family: Georgia, "Times New Roman", serif;
-
-      font-size: 27px;
+      font-size: 24px;
       font-weight: 400;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+    }
 
-      line-height: 1.15;
-
-      letter-spacing: -0.025em;
+    .article-main h3 a:hover {
+      text-decoration: underline;
+      text-underline-offset: 4px;
     }
 
     .article-description {
-      max-width: 750px;
-
-      margin-top: 10px;
-
-      color: #666;
-
-      font-size: 14px;
-    }
-
-    .article-tags {
-      display: flex;
-      flex-wrap: wrap;
-
-      gap: 5px;
-
-      margin-top: 13px;
-    }
-
-    .article-tag {
-      color: #777;
-
-      font-size: 10px;
-    }
-
-    .article-tag:not(:last-child)::after {
-      content: " / ";
-
-      margin-left: 5px;
+      max-width: 760px;
+      color: #5c5c5c;
+      font-size: 13px;
+      line-height: 1.7;
     }
 
     .article-meta {
-      color: #777;
-
-      font-size: 12px;
-
+      color: var(--gray);
+      font-size: 11px;
+      line-height: 1.6;
       text-align: right;
     }
 
     .article-outlet {
+      display: block;
       margin-bottom: 4px;
-
       color: var(--black);
-
       font-weight: 700;
     }
 
-    .article-link {
-      display: inline-block;
-
-      margin-top: 12px;
-
-      color: var(--red);
-
-      font-size: 10px;
-      font-weight: 700;
-
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-
-    /* =========================
-       PAGINATION
-    ========================= */
-
-    .pagination {
-      display: flex;
-
-      justify-content: center;
-      align-items: center;
-
-      gap: 6px;
-
-      margin-top: 45px;
-    }
-
-    .page-btn {
-      min-width: 38px;
-      height: 38px;
-
-      padding: 0 10px;
-
-      background: transparent;
-
-      border: 1px solid #bbb;
-
-      cursor: pointer;
-
-      font-size: 11px;
-    }
-
-    .page-btn:hover,
-    .page-btn.active {
-      background: var(--black);
-      color: var(--white);
-
-      border-color: var(--black);
-    }
-
-    .page-btn:disabled {
-      opacity: 0.3;
-
-      cursor: default;
-    }
-
-
-    /* =========================
-       NO RESULTS / LOADING
-    ========================= */
-
-    .loading,
-    .no-results {
-      padding: 70px 0;
-
+    .empty-state {
+      padding: 50px 0;
       color: var(--gray);
-
-      font-family: Georgia, "Times New Roman", serif;
-
-      font-size: 20px;
-
       text-align: center;
     }
 
-    .no-results {
-      display: none;
+    .pagination {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 36px;
     }
 
+    .page-button {
+      min-width: 38px;
+      height: 38px;
+      padding: 0 10px;
+      background: transparent;
+      border: 1px solid var(--light-gray);
+      cursor: pointer;
+      font-size: 12px;
+    }
 
-    /* =========================
-       CONTACT
-    ========================= */
+    .page-button:hover,
+    .page-button.active {
+      background: var(--black);
+      border-color: var(--black);
+      color: var(--white);
+    }
 
+    .page-button:disabled {
+      cursor: default;
+      opacity: 0.35;
+    }
+
+    /* Contact */
     .contact-grid {
       display: grid;
-
       grid-template-columns: 1fr 1fr;
-
-      gap: 30px;
-
-      margin-top: 70px;
+      gap: 80px;
+      align-items: end;
     }
 
-    .contact-card {
+    .contact-lead {
+      max-width: 760px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(34px, 4vw, 58px);
+      font-weight: 400;
+      line-height: 1.1;
+      letter-spacing: -0.035em;
+    }
+
+    .contact-links {
       border-top: 1px solid var(--black);
-
-      padding-top: 18px;
-    }
-
-    .contact-label {
-      margin-bottom: 10px;
-
-      color: var(--gray);
-
-      font-size: 10px;
-
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
     }
 
     .contact-link {
-      font-family: Georgia, "Times New Roman", serif;
-
-      font-size: clamp(22px, 3vw, 38px);
-
-      word-break: break-word;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--light-gray);
+      font-size: 14px;
     }
 
-    .contact-link:hover {
-      color: var(--red);
+    .contact-link span:last-child {
+      color: var(--gray);
     }
 
+    .contact-link:hover span:first-child {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
 
-    /* =========================
-       FOOTER
-    ========================= */
-
+    /* Footer */
     footer {
-      padding: 25px 0;
+      background: var(--black);
+      color: var(--white);
     }
 
     .footer-inner {
+      min-height: 120px;
       display: flex;
-
+      align-items: center;
       justify-content: space-between;
-
-      color: #777;
-
+      gap: 20px;
       font-size: 11px;
+      letter-spacing: 0.06em;
     }
 
+    .footer-right {
+      color: #999;
+    }
 
-    /* =========================
-       MOBILE
-    ========================= */
-
-    @media (max-width: 800px) {
-
-      .container {
-        width: calc(100% - 30px);
+    /* Responsive */
+    @media (max-width: 900px) {
+      .nav-links {
+        gap: 16px;
+        font-size: 11px;
       }
 
-      section {
-        padding: 75px 0;
+      .section-heading {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .selected-intro {
+        margin-left: 0;
+      }
+
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+
+      .selected-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .experience-item {
+        grid-template-columns: 130px 160px 1fr;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .container {
+        width: min(100% - 28px, var(--max-width));
       }
 
       .nav {
-        height: 62px;
+        min-height: 64px;
+      }
+
+      .brand {
+        font-size: 18px;
       }
 
       .nav-links {
-        gap: 14px;
-      }
-
-      .nav-links a {
-        font-size: 10px;
+        gap: 12px;
+        font-size: 9px;
+        letter-spacing: 0.04em;
       }
 
       .hero {
         min-height: auto;
-
-        padding: 100px 0;
-      }
-
-      .hero-grid {
-        grid-template-columns: 1fr;
-
-        gap: 55px;
+        padding: 88px 0 100px;
       }
 
       .hero h1 {
-        font-size: clamp(65px, 20vw, 110px);
+        font-size: clamp(64px, 19vw, 110px);
       }
 
-      .about-grid {
-        grid-template-columns: 1fr;
-
-        gap: 50px;
-
-        margin-top: 50px;
+      .hero-description {
+        margin-top: 40px;
+        font-size: 16px;
       }
 
-      .education-item,
+      .section {
+        padding: 80px 0;
+      }
+
+      .about-lead {
+        font-size: 28px;
+      }
+
+      .timeline-item,
       .experience-item {
         grid-template-columns: 1fr;
-
         gap: 10px;
       }
 
-      .articles-header {
-        align-items: flex-start;
+      .experience-role {
+        margin-bottom: 2px;
+      }
 
-        flex-direction: column;
+      .article-controls {
+        grid-template-columns: 1fr;
+      }
+
+      .category-list {
+        justify-content: flex-start;
       }
 
       .article-card {
         grid-template-columns: 1fr;
-
         gap: 10px;
       }
 
-      .article-number {
-        display: none;
-      }
-
       .article-meta {
-        margin-top: 5px;
-
         text-align: left;
       }
 
-      .contact-grid {
-        grid-template-columns: 1fr;
-
-        gap: 45px;
+      .article-main h3 {
+        font-size: 22px;
       }
 
       .footer-inner {
         flex-direction: column;
-
-        gap: 8px;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 24px 0;
       }
     }
-
   </style>
 </head>
 
-
 <body>
-
-
-  <!-- =========================
-       HEADER
-  ========================= -->
-
   <header>
-
     <div class="container nav">
+      <a class="brand" href="#top">Youngseon Jung</a>
 
-      <a
-        href="#top"
-        class="logo"
-      >
-        YOUNGSEON JUNG
-      </a>
-
-
-      <nav>
-
-        <ul class="nav-links">
-
-          <li>
-            <a href="#about">
-              About
-            </a>
-          </li>
-
-          <li>
-            <a href="#experience">
-              Experience
-            </a>
-          </li>
-
-          <li>
-            <a href="#articles">
-              Articles
-            </a>
-          </li>
-
-          <li>
-            <a href="#contact">
-              Contact
-            </a>
-          </li>
-
-        </ul>
-
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#selected-work">Selected Work</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#articles">Articles</a>
+        <a href="#contact">Contact</a>
       </nav>
-
     </div>
-
   </header>
-
-
 
   <main id="top">
 
-
-    <!-- =========================
-         HERO
-    ========================= -->
-
+    <!-- Hero -->
     <section class="hero">
+      <div class="container hero-inner">
+        <div class="kicker">Journalist / Researcher</div>
 
-      <div class="container">
+        <h1>
+          <span>Youngseon</span>
+          <span>Jung.</span>
+        </h1>
 
-        <div class="hero-grid">
+        <p class="hero-description">
+          Stories that help us understand Korea and the world.
+        </p>
 
-
-          <div>
-
-            <div class="hero-kicker">
-              Journalist / Researcher
-            </div>
-
-            <h1>
-              Youngseon
-              <span>Jung.</span>
-            </h1>
-
-          </div>
-
-
-          <div>
-
-            <p class="hero-description">
-              Stories that help us understand
-              Korea and the world.
-            </p>
-
-            <p class="hero-meta">
-              Journalism · International Affairs ·
-              Business · Society
-            </p>
-
-          </div>
-
-
+        <div class="hero-meta">
+          <span>Journalism</span>
+          <span>International Affairs</span>
+          <span>Business</span>
+          <span>Society</span>
         </div>
-
       </div>
-
     </section>
 
-
-
-    <!-- =========================
-         ABOUT
-    ========================= -->
-
-    <section id="about">
-
+    <!-- Selected Work -->
+    <section id="selected-work" class="selected-work section">
       <div class="container">
-
-        <div class="section-label">
-          01 / About
+        <div class="section-heading">
+          <div class="section-number">01 / Selected Work</div>
+          <h2 class="section-title">Selected work</h2>
         </div>
 
-        <h2 class="section-title">
-          About me
-        </h2>
+        <p class="selected-intro">
+          A small selection of stories and reporting projects I directly worked on.
+          Featured pieces can be managed through <strong>articles.json</strong>.
+        </p>
 
+        <div id="selectedGrid" class="selected-grid">
+          <div class="selected-empty">Loading selected work...</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-number">02 / About</div>
+          <h2 class="section-title">About</h2>
+        </div>
 
         <div class="about-grid">
-
+          <div>
+            <p class="about-lead">
+              I am interested in journalism that does more than deliver facts —
+              journalism that helps readers understand the context behind them.
+            </p>
+          </div>
 
           <div class="about-text">
-
-            I am interested in journalism
-            that does more than deliver facts —
-            journalism that helps readers
-            understand the context behind them.
-
-          </div>
-
-
-          <div class="about-side">
-
             <p>
-              I studied History and Sociology
-              at Ewha Womans University and
-              developed an interest in
-              international affairs through
-              my studies and experiences abroad.
+              My academic background is in History and Sociology at Ewha Womans
+              University, with an exchange semester at the University of British
+              Columbia.
             </p>
 
             <p>
-              My reporting interests include
-              Korea's relationship with the world,
-              business and economy, society,
-              culture and issues that require
-              careful research and explanation.
+              I have experience in reporting, research, media monitoring,
+              translation and fact-checking, with particular interests in Korea's
+              relationship with the world, business and economy, and social and
+              cultural issues.
             </p>
 
+            <div class="interest-list">
+              <div class="interest-item">
+                <span>01</span>
+                <span>Korea &amp; the world</span>
+              </div>
 
-            <div class="interests">
+              <div class="interest-item">
+                <span>02</span>
+                <span>Business &amp; economy</span>
+              </div>
 
-              <span class="interest">
-                Korea & Global Affairs
-              </span>
+              <div class="interest-item">
+                <span>03</span>
+                <span>Society &amp; culture</span>
+              </div>
 
-              <span class="interest">
-                Business & Economy
-              </span>
-
-              <span class="interest">
-                Society & Culture
-              </span>
-
-              <span class="interest">
-                International Reporting
-              </span>
-
-              <span class="interest">
-                Research & Translation
-              </span>
-
+              <div class="interest-item">
+                <span>04</span>
+                <span>Research &amp; explanation</span>
+              </div>
             </div>
-
           </div>
-
-
         </div>
-
       </div>
-
     </section>
 
-
-
-    <!-- =========================
-         EDUCATION
-    ========================= -->
-
-    <section id="education">
-
+    <!-- Education -->
+    <section id="education" class="section">
       <div class="container">
-
-        <div class="section-label">
-          02 / Education
+        <div class="section-heading">
+          <div class="section-number">03 / Education</div>
+          <h2 class="section-title">Education</h2>
         </div>
 
-        <h2 class="section-title">
-          Education
-        </h2>
+        <div class="timeline">
 
+          <div class="timeline-item">
+            <div class="timeline-date">Current / Recent</div>
 
-        <div class="education-list">
-
-
-          <div class="education-item">
-
-            <div class="education-date">
-              University
+            <div class="timeline-main">
+              <h3>Ewha Womans University</h3>
+              <p>History &amp; Sociology</p>
             </div>
-
-            <div>
-
-              <div class="education-school">
-                Ewha Womans University
-              </div>
-
-              <div class="education-detail">
-                History & Sociology
-              </div>
-
-            </div>
-
           </div>
 
+          <div class="timeline-item">
+            <div class="timeline-date">Jan 2024 – Apr 2024</div>
 
-          <div class="education-item">
-
-            <div class="education-date">
-              Jan 2024 — Apr 2024
+            <div class="timeline-main">
+              <h3>The University of British Columbia</h3>
+              <p>
+                Exchange Student · International Law Club · Human Rights,
+                Refugees &amp; Territorial Disputes
+              </p>
             </div>
-
-            <div>
-
-              <div class="education-school">
-                The University of British Columbia
-              </div>
-
-              <div class="education-detail">
-                Exchange Student · International Law Club ·
-                Human Rights, Refugees & Territorial Disputes
-              </div>
-
-            </div>
-
           </div>
 
+          <div class="timeline-item">
+            <div class="timeline-date">July 2025</div>
 
-          <div class="education-item">
-
-            <div class="education-date">
-              July 2025
+            <div class="timeline-main">
+              <h3>The University of Edinburgh</h3>
+              <p>Language Training &amp; International Project</p>
             </div>
-
-            <div>
-
-              <div class="education-school">
-                The University of Edinburgh
-              </div>
-
-              <div class="education-detail">
-                Language Training & International Project
-              </div>
-
-            </div>
-
           </div>
-
 
         </div>
-
       </div>
-
     </section>
 
-
-
-    <!-- =========================
-         EXPERIENCE
-    ========================= -->
-
-    <section id="experience">
-
+    <!-- Experience -->
+    <section id="experience" class="section">
       <div class="container">
-
-        <div class="section-label">
-          03 / Experience
+        <div class="section-heading">
+          <div class="section-number">04 / Experience</div>
+          <h2 class="section-title">Experience</h2>
         </div>
-
-        <h2 class="section-title">
-          Experience
-        </h2>
-
 
         <div class="experience-list">
 
-
           <div class="experience-item">
+            <div class="experience-date">July 2025</div>
 
-            <div class="experience-date">
-              July 2025
+            <div class="experience-role">
+              International Project
             </div>
 
-            <div>
-
-              <div class="experience-title">
-                International Project
-              </div>
-
-              <div class="experience-org">
-                The University of Edinburgh
-              </div>
-
-              <div class="experience-description">
-                Worked as the leader of a
-                five-person team on a bilingual
-                project about mobility rights and
-                accessibility. Conducted interviews
-                and produced a short video in
-                Korean and English.
-              </div>
-
+            <div class="experience-description">
+              Led a five-person bilingual project on mobility rights and
+              accessibility. Interviewed disability-facility staff in English
+              and produced a short video with Korean and English subtitles.
             </div>
-
           </div>
 
-
           <div class="experience-item">
+            <div class="experience-date">Jan 2025 – Feb 2025</div>
 
-            <div class="experience-date">
-              Jan 2025 — Feb 2025
+            <div class="experience-role">
+              CNN · Editorial Intern
             </div>
 
-            <div>
-
-              <div class="experience-title">
-                Editorial Intern
-              </div>
-
-              <div class="experience-org">
-                CNN
-              </div>
-
-              <div class="experience-description">
-                Monitored Korean and international
-                news, prepared English news summaries,
-                conducted research and supported
-                reporting related to Korea for
-                international audiences.
-              </div>
-
+            <div class="experience-description">
+              Monitored Korean and international news, prepared daily English
+              summaries, conducted research and supported Korea-related
+              reporting and interview work for international readers.
             </div>
-
           </div>
 
-
           <div class="experience-item">
+            <div class="experience-date">Feb 2023 – Dec 2023</div>
 
-            <div class="experience-date">
-              Feb 2023 — Dec 2023
+            <div class="experience-role">
+              Supreme Prosecutors' Office · Reporter
             </div>
 
-            <div>
-
-              <div class="experience-title">
-                Reporter
-              </div>
-
-              <div class="experience-org">
-                Supreme Prosecutors' Office of Korea
-              </div>
-
-              <div class="experience-description">
-                Covered and researched legal and
-                social issues through a reporter
-                program.
-              </div>
-
+            <div class="experience-description">
+              Produced reporting content and covered legal and public-interest
+              issues through a prosecutor's office reporting program.
             </div>
-
           </div>
 
-
           <div class="experience-item">
+            <div class="experience-date">Aug 2022 – Jan 2023</div>
 
-            <div class="experience-date">
-              Aug 2022 — Jan 2023
+            <div class="experience-role">
+              Ewha Womans University · Reporter
             </div>
 
-            <div>
-
-              <div class="experience-title">
-                University Reporter
-              </div>
-
-              <div class="experience-org">
-                Ewha Womans University
-              </div>
-
-              <div class="experience-description">
-                Reported on university and
-                student-related issues and
-                produced written content.
-              </div>
-
+            <div class="experience-description">
+              Reported on university issues, interviewed sources and developed
+              written coverage for student readers.
             </div>
-
           </div>
 
-
           <div class="experience-item">
+            <div class="experience-date">Aug 2022 – Dec 2022</div>
 
-            <div class="experience-date">
-              Aug 2022 — Dec 2022
+            <div class="experience-role">
+              Media &amp; Fact-Checking Program
             </div>
 
-            <div>
-
-              <div class="experience-title">
-                Media & Fact-Checking Program
-              </div>
-
-              <div class="experience-org">
-                Media & Fact-Checking Activities
-              </div>
-
-              <div class="experience-description">
-                Conducted interviews and research
-                on fact-checking topics and
-                produced media content.
-              </div>
-
+            <div class="experience-description">
+              Interviewed media professionals and created fact-checking content,
+              including short-form video and written reports.
             </div>
-
           </div>
-
 
         </div>
-
       </div>
-
     </section>
 
-
-
-    <!-- =========================
-         ARTICLES
-         IMPORTANT:
-         기사 내용은 여기에 넣지 않음.
-         articles.json에서 불러옴.
-    ========================= -->
-
-    <section id="articles">
-
+    <!-- Articles -->
+    <section id="articles" class="section">
       <div class="container">
 
-
-        <div class="articles-header">
-
-          <div>
-
-            <div class="section-label">
-              04 / Articles
-            </div>
-
-            <h2 class="section-title">
-              Selected work
-            </h2>
-
-          </div>
-
-
-          <div
-            class="article-count"
-            id="articleCount"
-          >
-            Loading...
-          </div>
-
+        <div class="section-heading">
+          <div class="section-number">05 / Articles</div>
+          <h2 class="section-title">Selected work</h2>
         </div>
-
-
-
-        <!-- SEARCH + CATEGORY -->
 
         <div class="article-controls">
 
-
-          <div class="search-box">
+          <div class="search-wrap">
+            <label for="searchInput">Search articles</label>
 
             <input
-              type="text"
               id="searchInput"
-              placeholder="Search articles..."
+              class="search-input"
+              type="search"
+              placeholder="Search by title, outlet or keyword"
               autocomplete="off"
-            >
-
+            />
           </div>
 
-
-          <div
-            class="category-list"
-            id="categoryList"
-          >
-            <!-- JS가 자동으로 생성 -->
-          </div>
-
+          <div id="categoryList" class="category-list"></div>
 
         </div>
 
-
-
-        <!-- ARTICLES -->
-
-        <div
-          class="articles-list"
-          id="articlesList"
-        >
-
-          <div class="loading">
+        <div id="articleList" class="article-list">
+          <div class="empty-state">
             Loading articles...
           </div>
-
         </div>
 
-
-
-        <!-- NO RESULTS -->
-
-        <div
-          class="no-results"
-          id="noResults"
-        >
-          No articles found.
-        </div>
-
-
-
-        <!-- PAGINATION -->
-
-        <div
-          class="pagination"
-          id="pagination"
-        ></div>
-
+        <div id="pagination" class="pagination"></div>
 
       </div>
-
     </section>
 
-
-
-    <!-- =========================
-         CONTACT
-    ========================= -->
-
-    <section id="contact">
-
+    <!-- Contact -->
+    <section id="contact" class="section">
       <div class="container">
 
-        <div class="section-label">
-          05 / Contact
+        <div class="section-heading">
+          <div class="section-number">06 / Contact</div>
+          <h2 class="section-title">Get in touch</h2>
         </div>
-
-        <h2 class="section-title">
-          Let's talk.
-        </h2>
-
 
         <div class="contact-grid">
 
+          <p class="contact-lead">
+            For reporting, research or collaboration inquiries.
+          </p>
 
-          <div class="contact-card">
-
-            <div class="contact-label">
-              Email
-            </div>
+          <div class="contact-links">
 
             <a
-              href="mailto:jyoungseon8@gmail.com"
               class="contact-link"
+              href="mailto:jyoungseon8@gmail.com"
             >
-              jyoungseon8@gmail.com
+              <span>Email</span>
+              <span>jyoungseon8@gmail.com</span>
             </a>
 
-          </div>
-
-
-          <div class="contact-card">
-
-            <div class="contact-label">
-              LinkedIn
-            </div>
-
             <a
+              class="contact-link"
               href="https://www.linkedin.com/in/youngseon/"
               target="_blank"
               rel="noopener noreferrer"
-              class="contact-link"
             >
-              linkedin.com/in/youngseon
+              <span>LinkedIn</span>
+              <span>Open profile ↗</span>
             </a>
 
           </div>
-
-
         </div>
-
       </div>
-
     </section>
-
 
   </main>
 
-
-
-  <!-- =========================
-       FOOTER
-  ========================= -->
-
   <footer>
-
-    <div class="container">
-
-      <div class="footer-inner">
-
-        <div>
-          © 2026 Youngseon Jung
-        </div>
-
-        <div>
-          Journalist Portfolio
-        </div>
-
+    <div class="container footer-inner">
+      <div>© 2026 Youngseon Jung</div>
+      <div class="footer-right">
+        Journalist / Researcher
       </div>
-
     </div>
-
   </footer>
-
-
-
-  <!-- =========================
-       JAVASCRIPT
-  ========================= -->
 
   <script>
 
-    /* =========================
-       SETTINGS
-    ========================= */
+    const CNN_URL =
+      "https://edition.cnn.com/world/asia/south-korea-woman-rape-retrial-intl-hnk-dst";
 
-    const ARTICLES_PER_PAGE = 8;
-
-
-    /* =========================
-       VARIABLES
-    ========================= */
+    /*
+      CNN 대표 작업.
+      articles.json에 CNN 기사가 아직 없어도 Selected Work에 표시됩니다.
+      나중에 articles.json에 같은 URL을 넣으면 JSON 데이터를 우선 사용합니다.
+    */
+    const CNN_FALLBACK = {
+      id: "cnn-choi-mal-ja",
+      title: "Choi Mal-ja Retrial Coverage",
+      url: CNN_URL,
+      category: "Society",
+      outlet: "CNN",
+      image: "images/choi-mal-ja.jpg",
+      description:
+        "Reporting and research support for CNN coverage of a Korean retrial case.",
+      featured: true
+    };
 
     let allArticles = [];
 
-    let filteredArticles = [];
+    let activeCategory = "All";
+
+    let searchTerm = "";
 
     let currentPage = 1;
 
-    let currentCategory = "All";
+    const ARTICLES_PER_PAGE = 8;
 
-    let currentSearch = "";
-
-
-    /* =========================
-       ELEMENTS
-    ========================= */
-
-    const articlesList =
-      document.getElementById("articlesList");
-
-    const categoryList =
-      document.getElementById("categoryList");
+    const articleList =
+      document.getElementById("articleList");
 
     const pagination =
       document.getElementById("pagination");
 
+    const categoryList =
+      document.getElementById("categoryList");
+
     const searchInput =
       document.getElementById("searchInput");
 
-    const articleCount =
-      document.getElementById("articleCount");
-
-    const noResults =
-      document.getElementById("noResults");
+    const selectedGrid =
+      document.getElementById("selectedGrid");
 
 
     /* =========================
-       LOAD ARTICLES.JSON
+       Security / text helpers
     ========================= */
 
-    async function loadArticles() {
+    function escapeHtml(value) {
 
-      try {
-
-        /*
-          articles.json은
-          index.html과 같은 폴더에 있어야 합니다.
-        */
-
-        const response =
-          await fetch("./articles.json");
+      return String(value ?? "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
 
 
-        if (!response.ok) {
+    function escapeAttribute(value) {
 
-          throw new Error(
-            "articles.json을 불러오지 못했습니다."
-          );
-
-        }
-
-
-        /*
-          JSON → JavaScript 배열
-        */
-
-        allArticles =
-          await response.json();
-
-
-        /*
-          최신 기사부터 정렬
-        */
-
-        allArticles.sort(
-          (a, b) =>
-            new Date(b.date) -
-            new Date(a.date)
-        );
-
-
-        /*
-          처음에는 모든 기사
-        */
-
-        filteredArticles =
-          [...allArticles];
-
-
-        /*
-          카테고리 버튼 생성
-        */
-
-        createCategoryButtons();
-
-
-        /*
-          기사 출력
-        */
-
-        renderArticles();
-
-
-      } catch (error) {
-
-        console.error(error);
-
-
-        articlesList.innerHTML = `
-          <div class="loading">
-
-            Articles could not be loaded.
-
-            <br>
-
-            <small>
-              Make sure articles.json
-              is in the same folder as index.html.
-            </small>
-
-          </div>
-        `;
-
-
-        articleCount.textContent =
-          "Error loading articles.";
-
-      }
+      return escapeHtml(value);
 
     }
 
 
     /* =========================
-       CATEGORY BUTTONS
+       Date
     ========================= */
 
-    function createCategoryButtons() {
+    function formatDate(dateString) {
 
-      /*
-        articles.json 안의
-        category를 자동으로 가져옵니다.
-      */
+      if (!dateString) {
+        return "";
+      }
+
+      const parts =
+        String(dateString).split("-");
+
+      if (parts.length !== 3) {
+        return String(dateString);
+      }
+
+      const year = parts[0];
+
+      const month =
+        Number(parts[1]);
+
+      const day =
+        Number(parts[2]);
+
+      const months = [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec"
+      ];
+
+      if (
+        !year ||
+        !month ||
+        !day ||
+        month < 1 ||
+        month > 12
+      ) {
+        return String(dateString);
+      }
+
+      return `${months[month - 1]} ${day}, ${year}`;
+    }
+
+
+    /* =========================
+       Search
+    ========================= */
+
+    function articleText(article) {
+
+      return [
+
+        article.title,
+
+        article.description,
+
+        article.outlet,
+
+        article.category,
+
+        article.content,
+
+        Array.isArray(article.tags)
+          ? article.tags.join(" ")
+          : article.tags
+
+      ]
+        .filter(Boolean)
+        .join(" ")
+        .toLowerCase();
+    }
+
+
+    /* =========================
+       Filter
+    ========================= */
+
+    function getFilteredArticles() {
+
+      return allArticles
+
+        .filter((article) => {
+
+          const categoryMatch =
+            activeCategory === "All" ||
+            article.category === activeCategory;
+
+          const searchMatch =
+            !searchTerm ||
+            articleText(article)
+              .includes(searchTerm);
+
+          return categoryMatch && searchMatch;
+        })
+
+        .sort((a, b) => {
+
+          return String(b.date || "")
+            .localeCompare(
+              String(a.date || "")
+            );
+
+        });
+    }
+
+
+    /* =========================
+       Categories
+    ========================= */
+
+    function renderCategories() {
 
       const categories = [
 
@@ -1620,213 +1262,106 @@
         ...new Set(
 
           allArticles
-
             .map(
-              article => article.category
+              (article) =>
+                article.category
             )
-
             .filter(Boolean)
 
         )
 
       ];
 
+      categoryList.innerHTML =
+        categories
 
-      categoryList.innerHTML = "";
+          .map((category) => {
+
+            const isActive =
+              category === activeCategory;
+
+            return `
+
+              <button
+                class="category-button ${isActive ? "active" : ""}"
+                type="button"
+                data-category="${escapeAttribute(category)}"
+              >
+                ${escapeHtml(category)}
+              </button>
+
+            `;
+
+          })
+
+          .join("");
 
 
-      categories.forEach(
-        category => {
+      categoryList
 
-          const button =
-            document.createElement("button");
+        .querySelectorAll(
+          ".category-button"
+        )
 
-
-          button.className =
-            "category-btn";
-
-
-          if (category === "All") {
-
-            button.classList.add("active");
-
-          }
-
-
-          button.textContent =
-            category;
-
+        .forEach((button) => {
 
           button.addEventListener(
             "click",
             () => {
 
-              currentCategory =
-                category;
+              activeCategory =
+                button.dataset.category;
 
               currentPage = 1;
 
+              renderCategories();
 
-              document
-                .querySelectorAll(
-                  ".category-btn"
-                )
-                .forEach(
-                  btn =>
-                    btn.classList.remove(
-                      "active"
-                    )
-                );
-
-
-              button.classList.add(
-                "active"
-              );
-
-
-              filterArticles();
+              renderArticles();
 
             }
           );
 
-
-          categoryList.appendChild(
-            button
-          );
-
-        }
-      );
-
+        });
     }
 
 
     /* =========================
-       SEARCH
-    ========================= */
-
-    searchInput.addEventListener(
-      "input",
-      function () {
-
-        currentSearch =
-          this.value
-            .trim()
-            .toLowerCase();
-
-
-        currentPage = 1;
-
-
-        filterArticles();
-
-      }
-    );
-
-
-    /* =========================
-       FILTER
-    ========================= */
-
-    function filterArticles() {
-
-      filteredArticles =
-        allArticles.filter(
-          article => {
-
-
-            /*
-              CATEGORY
-            */
-
-            const matchesCategory =
-
-              currentCategory === "All" ||
-
-              article.category ===
-                currentCategory;
-
-
-            /*
-              SEARCH
-
-              제목
-              설명
-              매체
-              카테고리
-              태그
-            */
-
-            const searchableText = [
-
-              article.title,
-
-              article.description,
-
-              article.outlet,
-
-              article.category,
-
-              ...(article.tags || [])
-
-            ]
-
-              .join(" ")
-
-              .toLowerCase();
-
-
-            const matchesSearch =
-              searchableText.includes(
-                currentSearch
-              );
-
-
-            return (
-              matchesCategory &&
-              matchesSearch
-            );
-
-          }
-        );
-
-
-      renderArticles();
-
-    }
-
-
-    /* =========================
-       RENDER ARTICLES
+       Articles
     ========================= */
 
     function renderArticles() {
 
-      const totalArticles =
-        filteredArticles.length;
+      const filtered =
+        getFilteredArticles();
 
 
-      /*
-        기사 개수
-      */
-
-      articleCount.textContent =
-        `${totalArticles} ${
-          totalArticles === 1
-            ? "article"
-            : "articles"
-        }`;
+      const totalPages =
+        Math.max(
+          1,
+          Math.ceil(
+            filtered.length /
+              ARTICLES_PER_PAGE
+          )
+        );
 
 
-      /*
-        검색 결과 없음
-      */
+      if (currentPage > totalPages) {
 
-      if (totalArticles === 0) {
+        currentPage =
+          totalPages;
 
-        articlesList.innerHTML = "";
+      }
 
-        noResults.style.display =
-          "block";
+
+      if (!filtered.length) {
+
+        articleList.innerHTML = `
+
+          <div class="empty-state">
+            No articles found.
+          </div>
+
+        `;
 
         pagination.innerHTML = "";
 
@@ -1835,221 +1370,157 @@
       }
 
 
-      noResults.style.display =
-        "none";
-
-
-      /*
-        전체 페이지 수
-      */
-
-      const totalPages =
-        Math.ceil(
-          totalArticles /
-          ARTICLES_PER_PAGE
-        );
-
-
-      /*
-        현재 페이지
-      */
-
-      if (
-        currentPage > totalPages
-      ) {
-
-        currentPage =
-          totalPages;
-
-      }
-
-
-      /*
-        현재 페이지의
-        기사만 가져오기
-      */
-
       const startIndex =
         (currentPage - 1) *
         ARTICLES_PER_PAGE;
 
 
-      const endIndex =
-        startIndex +
-        ARTICLES_PER_PAGE;
-
-
       const pageArticles =
-        filteredArticles.slice(
+        filtered.slice(
           startIndex,
-          endIndex
+          startIndex +
+            ARTICLES_PER_PAGE
         );
 
 
-      /*
-        HTML 생성
-      */
-
-      articlesList.innerHTML =
+      articleList.innerHTML =
         pageArticles
-          .map(
-            (article, index) => {
+
+          .map((article, index) => {
+
+            const globalIndex =
+              startIndex +
+              index +
+              1;
 
 
-              const articleNumber =
-                String(
-                  startIndex + index + 1
-                ).padStart(2, "0");
+            const outlet =
+              article.outlet ||
+              "Article";
 
 
-              const date =
-                formatDate(
-                  article.date
-                );
+            const date =
+              formatDate(
+                article.date
+              );
 
 
-              /*
-                TAGS
-              */
+            const description =
+              article.description ||
 
-              const tags =
-                (article.tags || [])
-                  .map(
-                    tag => `
-                      <span class="article-tag">
-                        ${escapeHTML(tag)}
-                      </span>
-                    `
-                  )
-                  .join("");
+              (
+                article.content
+                  ? String(
+                      article.content
+                    ).slice(0, 180) +
+                    "..."
+                  : ""
+              );
 
 
-              /*
-                ARTICLE LINK
-              */
+            return `
 
-              const articleLink =
-                article.url
-                  ? `
+              <article
+                class="article-card"
+              >
+
+                <div
+                  class="article-index"
+                >
+                  ${String(
+                    globalIndex
+                  ).padStart(2, "0")}
+                </div>
+
+
+                <div
+                  class="article-main"
+                >
+
+                  <h3>
+
                     <a
                       href="${escapeAttribute(
-                        article.url
+                        article.url ||
+                        "#"
                       )}"
                       target="_blank"
                       rel="noopener noreferrer"
-                      class="article-link"
                     >
-                      Read Article →
+                      ${escapeHtml(
+                        article.title ||
+                        "Untitled"
+                      )}
                     </a>
-                  `
-                  : "";
+
+                  </h3>
 
 
-              return `
+                  ${
+                    description
 
-                <article
-                  class="article-card"
+                      ? `
+                        <p
+                          class="article-description"
+                        >
+                          ${escapeHtml(
+                            description
+                          )}
+                        </p>
+                      `
+
+                      : ""
+                  }
+
+                </div>
+
+
+                <div
+                  class="article-meta"
                 >
 
-
-                  <div
-                    class="article-number"
+                  <span
+                    class="article-outlet"
                   >
-                    ${articleNumber}
-                  </div>
+                    ${escapeHtml(
+                      outlet
+                    )}
+                  </span>
 
 
-                  <div
-                    class="article-main"
-                  >
+                  <span>
+                    ${escapeHtml(
+                      article.category ||
+                      ""
+                    )}
+                  </span>
 
 
-                    <div
-                      class="article-category"
-                    >
-                      ${escapeHTML(
-                        article.category ||
-                        "Article"
-                      )}
-                    </div>
+                  ${
+                    date
 
+                      ? `
+                        <br />
+                        <span>
+                          ${escapeHtml(
+                            date
+                          )}
+                        </span>
+                      `
 
-                    <h3
-                      class="article-title"
-                    >
-                      ${escapeHTML(
-                        article.title ||
-                        ""
-                      )}
-                    </h3>
+                      : ""
+                  }
 
+                </div>
 
-                    ${
-                      article.description
-                        ? `
-                          <p
-                            class="article-description"
-                          >
-                            ${escapeHTML(
-                              article.description
-                            )}
-                          </p>
-                        `
-                        : ""
-                    }
+              </article>
 
+            `;
 
-                    ${
-                      tags
-                        ? `
-                          <div
-                            class="article-tags"
-                          >
-                            ${tags}
-                          </div>
-                        `
-                        : ""
-                    }
+          })
 
-
-                    ${articleLink}
-
-
-                  </div>
-
-
-                  <div
-                    class="article-meta"
-                  >
-
-                    <div
-                      class="article-outlet"
-                    >
-                      ${escapeHTML(
-                        article.outlet || ""
-                      )}
-                    </div>
-
-
-                    <div>
-                      ${date}
-                    </div>
-
-                  </div>
-
-
-                </article>
-
-              `;
-
-            }
-          )
           .join("");
 
-
-      /*
-        페이지네이션
-      */
 
       renderPagination(
         totalPages
@@ -2059,301 +1530,478 @@
 
 
     /* =========================
-       PAGINATION
+       Pagination
     ========================= */
 
     function renderPagination(
       totalPages
     ) {
 
-      pagination.innerHTML = "";
-
-
-      /*
-        기사 8개 이하라면
-        페이지네이션 숨김
-      */
-
       if (totalPages <= 1) {
+
+        pagination.innerHTML =
+          "";
 
         return;
 
       }
 
 
-      /*
-        PREVIOUS
-      */
+      let html = `
 
-      const previous =
-        document.createElement(
-          "button"
-        );
+        <button
+          class="page-button"
+          type="button"
+          data-page="${currentPage - 1}"
+          ${currentPage === 1
+            ? "disabled"
+            : ""}
+        >
+          ←
+        </button>
 
+      `;
 
-      previous.className =
-        "page-btn";
-
-
-      previous.textContent =
-        "←";
-
-
-      previous.disabled =
-        currentPage === 1;
-
-
-      previous.addEventListener(
-        "click",
-        () => {
-
-          if (
-            currentPage > 1
-          ) {
-
-            currentPage--;
-
-            renderArticles();
-
-            scrollToArticles();
-
-          }
-
-        }
-      );
-
-
-      pagination.appendChild(
-        previous
-      );
-
-
-      /*
-        PAGE NUMBERS
-      */
 
       for (
         let page = 1;
         page <= totalPages;
-        page++
+        page += 1
       ) {
 
-        const button =
-          document.createElement(
-            "button"
+        html += `
+
+          <button
+            class="page-button ${
+              page === currentPage
+                ? "active"
+                : ""
+            }"
+            type="button"
+            data-page="${page}"
+          >
+            ${page}
+          </button>
+
+        `;
+
+      }
+
+
+      html += `
+
+        <button
+          class="page-button"
+          type="button"
+          data-page="${currentPage + 1}"
+          ${
+            currentPage === totalPages
+              ? "disabled"
+              : ""
+          }
+        >
+          →
+        </button>
+
+      `;
+
+
+      pagination.innerHTML =
+        html;
+
+
+      pagination
+
+        .querySelectorAll(
+          ".page-button:not(:disabled)"
+        )
+
+        .forEach((button) => {
+
+          button.addEventListener(
+            "click",
+            () => {
+
+              currentPage =
+                Number(
+                  button.dataset.page
+                );
+
+              renderArticles();
+
+
+              document
+                .getElementById(
+                  "articles"
+                )
+                .scrollIntoView({
+                  behavior:
+                    "smooth",
+                  block: "start"
+                });
+
+            }
           );
 
-
-        button.className =
-          "page-btn";
-
-
-        button.textContent =
-          page;
+        });
+    }
 
 
-        if (
-          page === currentPage
-        ) {
+    /* =========================
+       Selected Work
+    ========================= */
 
-          button.classList.add(
-            "active"
-          );
+    function renderSelectedWorks() {
 
+      const featuredFromJson =
+        allArticles.filter(
+          (article) =>
+            article.featured === true
+        );
+
+
+      const cnnFromJson =
+        allArticles.find(
+          (article) =>
+            String(
+              article.url || ""
+            ).trim() === CNN_URL
+        );
+
+
+      const selected = [];
+
+      const usedUrls =
+        new Set();
+
+
+      function addUnique(article) {
+
+        if (!article) {
+          return;
         }
 
 
-        button.addEventListener(
-          "click",
-          () => {
-
-            currentPage =
-              page;
-
-            renderArticles();
-
-            scrollToArticles();
-
-          }
-        );
+        const url =
+          String(
+            article.url || ""
+          ).trim();
 
 
-        pagination.appendChild(
-          button
-        );
+        if (
+          url &&
+          usedUrls.has(url)
+        ) {
+          return;
+        }
+
+
+        if (url) {
+          usedUrls.add(url);
+        }
+
+
+        selected.push(article);
 
       }
 
 
       /*
-        NEXT
+        CNN을 먼저 보여줍니다.
       */
-
-      const next =
-        document.createElement(
-          "button"
-        );
-
-
-      next.className =
-        "page-btn";
-
-
-      next.textContent =
-        "→";
-
-
-      next.disabled =
-        currentPage === totalPages;
-
-
-      next.addEventListener(
-        "click",
-        () => {
-
-          if (
-            currentPage <
-            totalPages
-          ) {
-
-            currentPage++;
-
-            renderArticles();
-
-            scrollToArticles();
-
-          }
-
-        }
+      addUnique(
+        cnnFromJson ||
+        CNN_FALLBACK
       );
 
 
-      pagination.appendChild(
-        next
-      );
+      /*
+        articles.json에서 featured:true인
+        기사들을 추가합니다.
+      */
+      featuredFromJson
+        .forEach(addUnique);
 
-    }
+
+      /*
+        Selected Work에는 최대 3개만 표시
+      */
+      const visible =
+        selected.slice(0, 3);
 
 
-    /* =========================
-       DATE
-    ========================= */
+      if (!visible.length) {
 
-    function formatDate(
-      dateString
-    ) {
+        selectedGrid.innerHTML = `
 
-      if (!dateString) {
+          <div
+            class="selected-empty"
+          >
+            No selected work available.
+          </div>
 
-        return "";
+        `;
+
+        return;
 
       }
 
 
-      const date =
-        new Date(dateString);
+      selectedGrid.innerHTML =
+        visible
+
+          .map((article) => {
+
+            const hasImage =
+              Boolean(
+                article.image
+              );
 
 
-      if (
-        Number.isNaN(
-          date.getTime()
-        )
-      ) {
+            const meta = [
 
-        return dateString;
+              article.outlet ||
+                "Selected Work",
+
+              article.date
+                ? formatDate(
+                    article.date
+                  )
+                : "",
+
+              article.category ||
+                ""
+
+            ]
+              .filter(Boolean)
+              .join(" · ");
+
+
+            const description =
+              article.description ||
+              "Selected reporting and research work.";
+
+
+            return `
+
+              <article
+                class="selected-card"
+              >
+
+                ${
+                  hasImage
+
+                    ? `
+                      <div
+                        class="selected-image"
+                      >
+
+                        <img
+                          src="${escapeAttribute(
+                            article.image
+                          )}"
+                          alt=""
+                          loading="lazy"
+                        />
+
+                      </div>
+                    `
+
+                    : `
+
+                      <div
+                        class="selected-image placeholder"
+                      >
+                        Image
+                      </div>
+
+                    `
+                }
+
+
+                <div
+                  class="selected-content"
+                >
+
+                  <div
+                    class="selected-meta"
+                  >
+                    ${escapeHtml(
+                      meta
+                    )}
+                  </div>
+
+
+                  <h3>
+                    ${escapeHtml(
+                      article.title ||
+                      "Selected Work"
+                    )}
+                  </h3>
+
+
+                  <p>
+                    ${escapeHtml(
+                      description
+                    )}
+                  </p>
+
+
+                  ${
+                    article.url
+
+                      ? `
+
+                        <a
+                          class="selected-link"
+                          href="${escapeAttribute(
+                            article.url
+                          )}"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Read Article ↗
+                        </a>
+
+                      `
+
+                      : ""
+                  }
+
+                </div>
+
+              </article>
+
+            `;
+
+          })
+
+          .join("");
+
+    }
+
+
+    /* =========================
+       Search input
+    ========================= */
+
+    searchInput.addEventListener(
+      "input",
+      (event) => {
+
+        searchTerm =
+          String(
+            event.target.value || ""
+          )
+            .trim()
+            .toLowerCase();
+
+
+        currentPage = 1;
+
+        renderArticles();
+
+      }
+    );
+
+
+    /* =========================
+       Load JSON
+    ========================= */
+
+    async function init() {
+
+      try {
+
+        const response =
+          await fetch(
+            "./articles.json",
+            {
+              cache:
+                "no-store"
+            }
+          );
+
+
+        if (!response.ok) {
+
+          throw new Error(
+            `Could not load articles.json (${response.status})`
+          );
+
+        }
+
+
+        const data =
+          await response.json();
+
+
+        if (!Array.isArray(data)) {
+
+          throw new Error(
+            "articles.json must contain an array."
+          );
+
+        }
+
+
+        allArticles =
+          data;
+
+
+        renderSelectedWorks();
+
+        renderCategories();
+
+        renderArticles();
 
       }
 
+      catch (error) {
 
-      return date.toLocaleDateString(
-        "en-US",
-        {
-          year: "numeric",
-          month: "short",
-          day: "numeric"
-        }
-      );
-
-    }
+        console.error(error);
 
 
-    /* =========================
-       SCROLL
-    ========================= */
+        selectedGrid.innerHTML = `
 
-    function scrollToArticles() {
+          <div
+            class="selected-empty"
+          >
+            Selected work could not be loaded.
+          </div>
 
-      document
-        .getElementById("articles")
-        .scrollIntoView({
-          behavior: "smooth"
-        });
-
-    }
+        `;
 
 
-    /* =========================
-       SECURITY
-    ========================= */
+        articleList.innerHTML = `
 
-    function escapeHTML(
-      value
-    ) {
+          <div class="empty-state">
 
-      return String(value)
+            Articles could not be loaded.
 
-        .replace(
-          /&/g,
-          "&amp;"
-        )
+            Make sure
+            <strong>index.html</strong>
+            and
+            <strong>articles.json</strong>
+            are in the same folder.
 
-        .replace(
-          /</g,
-          "&lt;"
-        )
+          </div>
 
-        .replace(
-          />/g,
-          "&gt;"
-        )
+        `;
 
-        .replace(
-          /"/g,
-          "&quot;"
-        )
 
-        .replace(
-          /'/g,
-          "&#039;"
-        );
+        categoryList.innerHTML =
+          "";
+
+        pagination.innerHTML =
+          "";
+
+      }
 
     }
 
 
-    function escapeAttribute(
-      value
-    ) {
-
-      return String(value)
-
-        .replace(
-          /"/g,
-          "&quot;"
-        )
-
-        .replace(
-          /'/g,
-          "&#039;"
-        );
-
-    }
-
-
-    /* =========================
-       START
-    ========================= */
-
-    loadArticles();
+    init();
 
   </script>
 
