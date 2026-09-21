@@ -438,5 +438,15 @@
 "date": "2026-09-21",
 "category": "Business",
 "content": "E-commerce platform deployment specifications for global defense procurement markets."
-}
+},
+"id": 56,
+  "title": "Choi Mal-ja retrial and acquittal",
+  "url": "https://www.koreaherald.com/article/10845710",
+  "date": "2025-04-12",
+  "category": "Society",
+  "content": "CNN reporting on the retrial and acquittal of Choi Mal-ja.",
+  "featured": true,
+  "image": "images/apr.jpg",
+  "showInArticles": false
+  },
 ]
