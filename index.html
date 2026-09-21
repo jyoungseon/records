@@ -1016,7 +1016,7 @@ filterArticles();
 
 /* FILTER */
 
-function filterArticles(){
+function filterArticles() {
 
   filteredArticles = allArticles.filter(article => {
 
@@ -1024,17 +1024,24 @@ function filterArticles(){
       return false;
     }
 
+    const articleCategory =
+      String(article.category || "").trim().toLowerCase();
+
+    const selectedCategory =
+      String(currentCategory || "").trim().toLowerCase();
+
     const matchesCategory =
-      currentCategory === "All" ||
-      article.category === currentCategory;
+      selectedCategory === "all" ||
+      articleCategory === selectedCategory;
 
     const searchableText = [
       article.title,
       article.description,
       article.outlet,
       article.category,
-      ...(article.tags || [])
+      ...(Array.isArray(article.tags) ? article.tags : [])
     ]
+      .filter(Boolean)
       .join(" ")
       .toLowerCase();
 
@@ -1046,7 +1053,6 @@ function filterArticles(){
   });
 
   renderArticles();
-
 }
 
 
