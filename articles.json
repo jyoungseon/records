@@ -1,1583 +1,445 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Youngseon Jung | Journalist</title>
-<meta name="description" content="Youngseon Jung — Journalist Portfolio">
-
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:Arial,Helvetica,sans-serif;background:#f5f3ef;color:#151515;line-height:1.6}
-a{color:inherit;text-decoration:none}
-button,input{font:inherit}
-:root{--black:#111;--paper:#f5f3ef;--white:#fff;--gray:#777;--light-gray:#d8d5cf;--red:#b52a2a;--max-width:1240px}
-.container{width:min(var(--max-width),calc(100% - 48px));margin:0 auto}
-section{padding:110px 0;border-bottom:1px solid var(--light-gray)}
-.section-label{margin-bottom:28px;color:var(--red);font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase}
-.section-title{font-family:Georgia,"Times New Roman",serif;font-size:clamp(48px,7vw,82px);font-weight:400;line-height:.95;letter-spacing:-.055em}
-
-header{position:sticky;top:0;z-index:100;background:rgba(245,243,239,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--light-gray)}
-.nav{height:72px;display:flex;align-items:center;justify-content:space-between}
-.logo{font-size:15px;font-weight:700;letter-spacing:-.02em}
-.nav-links{display:flex;gap:28px;list-style:none}
-.nav-links a{font-size:12px;font-weight:600;transition:color .2s}
-.nav-links a:hover{color:var(--red)}
-
-.hero{min-height:calc(100vh - 72px);display:flex;align-items:center}
-.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:95px;align-items:center;max-width:1120px;margin:0 auto;padding:0 20px}
-.hero-kicker{margin-bottom:28px;color:var(--red);font-size:12px;font-weight:700;letter-spacing:.15em;text-transform:uppercase}
-.hero h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(72px,11vw,150px);font-weight:400;line-height:.82;letter-spacing:-.075em;white-space:nowrap}
-.hero h1 span{display:block}
-.hero-description{max-width:390px;font-family:Georgia,"Times New Roman",serif;font-size:21px;line-height:1.4}
-.hero-meta{margin-top:28px;color:var(--gray);font-size:12px}
-
-/* SELECTED WORKS */
-.selected-works{background:var(--black);color:var(--white);border-bottom:1px solid #333}
-.selected-works .section-label{color:#d96b6b}
-.selected-header{display:block;margin-top:0}
-.selected-intro{max-width:430px;margin-top:28px;color:#aaa;font-size:14px}
-.featured-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:65px}
-.featured-card{min-width:0}
-.featured-image{width:100%;aspect-ratio:4/3;overflow:hidden;background:#292929;margin-bottom:22px}
-.featured-image img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
-.featured-card:hover .featured-image img{transform:scale(1.03)}
-.featured-number{margin-bottom:10px;color:#777;font-family:Georgia,"Times New Roman",serif;font-size:13px}
-.featured-meta{margin-bottom:10px;color:#999;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
-.featured-title{color:#fff;font-family:Georgia,"Times New Roman",serif;font-size:25px;font-weight:400;line-height:1.2;letter-spacing:-.025em}
-.featured-description{margin-top:12px;color:#999;font-size:13px}
-.featured-link{display:inline-block;margin-top:18px;color:#d96b6b;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
-.featured-link:hover{color:#fff}
-
-.about-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:100px;margin-top:70px}
-.about-text{font-family:Georgia,"Times New Roman",serif;font-size:clamp(25px,3vw,39px);line-height:1.25;letter-spacing:-.025em}
-.about-side{border-top:1px solid var(--black);padding-top:18px}
-.about-side p{max-width:600px;color:#444;font-size:15px}
-.about-side p+p{margin-top:18px}
-.interests{display:flex;flex-wrap:wrap;gap:8px;margin-top:32px}
-.interest{padding:7px 12px;border:1px solid #aaa;border-radius:999px;font-size:11px}
-
-.education-list,.experience-list{margin-top:70px;border-top:1px solid var(--black)}
-.education-item,.experience-item{display:grid;grid-template-columns:.7fr 1.3fr;padding:30px 0;border-bottom:1px solid var(--light-gray)}
-.experience-item{gap:40px;padding:32px 0}
-.education-date,.experience-date{color:var(--gray);font-size:11px;text-transform:uppercase;letter-spacing:.08em}
-.education-school,.experience-title{font-family:Georgia,"Times New Roman",serif;font-size:28px;line-height:1.15}
-.experience-title{font-size:29px}
-.education-detail,.experience-description{margin-top:8px;color:#666;font-size:14px}
-.experience-description{max-width:700px;margin-top:12px}
-.experience-org{margin-top:7px;font-size:14px;font-weight:700}
-
-.articles-header{display:flex;align-items:flex-end;justify-content:space-between;gap:30px}
-.articles-header>div:first-child{display:block}
-.article-count{color:var(--gray);font-size:12px;white-space:nowrap}
-.article-controls{display:flex;flex-direction:column;gap:20px;margin-top:60px}
-.search-box input{width:100%;height:58px;padding:0 5px;background:transparent;border:0;border-bottom:1px solid var(--black);outline:none;font-size:17px}
-.search-box input::placeholder{color:#999}
-.category-list{display:flex;flex-wrap:wrap;gap:8px}
-.category-btn{padding:8px 15px;background:transparent;border:1px solid #aaa;border-radius:999px;cursor:pointer;font-size:11px;transition:.2s}
-.category-btn:hover,.category-btn.active{background:var(--black);color:#fff;border-color:var(--black)}
-.articles-list{margin-top:45px;border-top:1px solid var(--black)}
-.article-card{display:grid;grid-template-columns:60px 1fr 170px;gap:30px;padding:30px 0;border-bottom:1px solid var(--light-gray);transition:padding .2s}
-.article-card:hover{padding-left:8px;padding-right:8px}
-.article-number{color:#999;font-family:Georgia,"Times New Roman",serif;font-size:18px}
-.article-category{margin-bottom:7px;color:var(--red);font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
-.article-title{font-family:Georgia,"Times New Roman",serif;font-size:27px;font-weight:400;line-height:1.15;letter-spacing:-.025em}
-.article-description{max-width:750px;margin-top:10px;color:#666;font-size:14px}
-.article-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:13px}
-.article-tag{color:#777;font-size:10px}
-.article-tag:not(:last-child)::after{content:" / ";margin-left:5px}
-.article-meta{color:#777;font-size:12px;text-align:right}
-.article-outlet{margin-bottom:4px;color:var(--black);font-weight:700}
-.article-link{display:inline-block;margin-top:12px;color:var(--red);font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
-.pagination{display:flex;justify-content:center;align-items:center;gap:6px;margin-top:45px}
-.page-btn{min-width:38px;height:38px;padding:0 10px;background:transparent;border:1px solid #bbb;cursor:pointer;font-size:11px}
-.page-btn:hover,.page-btn.active{background:var(--black);color:#fff;border-color:var(--black)}
-.page-btn:disabled{opacity:.3;cursor:default}
-.loading,.no-results{padding:70px 0;color:var(--gray);font-family:Georgia,"Times New Roman",serif;font-size:20px;text-align:center}
-.no-results{display:none}
-
-.contact-section{padding-top:62px;padding-bottom:112px}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:78px}
-.contact-card{border-top:1px solid var(--black);padding-top:18px}
-.contact-label{margin-bottom:12px;color:var(--gray);font-size:10px;letter-spacing:.1em;text-transform:uppercase}
-.contact-link{font-family:Georgia,"Times New Roman",serif;font-size:clamp(22px,3vw,38px);word-break:break-word}
-.contact-link:hover{color:var(--red)}
-footer{padding:25px 0}
-.footer-inner{display:flex;justify-content:space-between;color:#777;font-size:11px}
-
-@media(max-width:800px){
-.container{width:calc(100% - 30px)}
-section{padding:75px 0}
-.nav{height:62px}
-.nav-links{gap:14px}
-.nav-links a{font-size:10px}
-.hero{min-height:auto;padding:100px 0}
-.hero-grid{grid-template-columns:1fr;gap:55px;max-width:none;margin:0;padding:0}
-.hero h1{font-size:clamp(65px,20vw,110px);white-space:normal}
-.selected-header{display:block;margin-top:0}
-.featured-grid{grid-template-columns:1fr;gap:50px;margin-top:45px}
-.about-grid{grid-template-columns:1fr;gap:50px;margin-top:50px}
-.education-item,.experience-item{grid-template-columns:1fr;gap:10px}
-.articles-header{align-items:flex-start;flex-direction:column}
-.article-card{grid-template-columns:1fr;gap:10px}
-.article-number{display:none}
-.article-meta{margin-top:5px;text-align:left}
-.contact-grid{grid-template-columns:1fr;gap:45px}
-.footer-inner{flex-direction:column;gap:8px}
-}
-</style>
-</head>
-
-<body>
-
-<header>
-<div class="container nav">
-<a href="#top" class="logo">YOUNGSEON JUNG</a>
-
-<nav>
-<ul class="nav-links">
-<li><a href="#selected-works">Selected Works</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#experience">Experience</a></li>
-<li><a href="#articles">Articles</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-</nav>
-
-</div>
-</header>
-
-
-<main id="top">
-
-
-<!-- HERO -->
-
-<section class="hero">
-
-<div class="container">
-
-<div class="hero-grid">
-
-<div>
-
-<div class="hero-kicker">
-Journalist / Researcher
-</div>
-
-<h1>
-Youngseon
-<span>Jung.</span>
-</h1>
-
-</div>
-
-
-<div>
-
-<p class="hero-description">
-Stories that help us understand Korea and the world.
-</p>
-
-<p class="hero-meta">
-Journalism · International Affairs · Business · Society
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- SELECTED WORKS -->
-
-<section id="selected-works" class="selected-works">
-
-<div class="container">
-
-<div class="section-label">
-01 / Selected Works
-</div>
-
-<div class="selected-header">
-
-<h2 class="section-title">
-Selected Works
-</h2>
-
-<p class="selected-intro">
-A selection of stories and reporting I have worked on.
-</p>
-
-</div>
-
-<div
-class="featured-grid"
-id="featuredGrid">
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- ABOUT -->
-
-<section id="about">
-
-<div class="container">
-
-<div class="section-label">
-02 / About
-</div>
-
-<h2 class="section-title">
-About me
-</h2>
-
-
-<div class="about-grid">
-
-
-<div class="about-text">
-
-I am interested in journalism that does more than deliver facts — journalism that helps readers understand the context behind them.
-
-</div>
-
-
-<div class="about-side">
-
-<p>
-I studied History and Sociology at Ewha Womans University and developed an interest in international affairs through my studies and experiences abroad.
-</p>
-
-<p>
-My reporting interests include Korea's relationship with the world, business and economy, society, culture and issues that require careful research and explanation.
-</p>
-
-
-<div class="interests">
-
-<span class="interest">
-Korea & Global Affairs
-</span>
-
-<span class="interest">
-Business & Economy
-</span>
-
-<span class="interest">
-Society & Culture
-</span>
-
-<span class="interest">
-International Reporting
-</span>
-
-<span class="interest">
-Research & Translation
-</span>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- EDUCATION -->
-
-<section id="education">
-
-<div class="container">
-
-<div class="section-label">
-03 / Education
-</div>
-
-<h2 class="section-title">
-Education
-</h2>
-
-
-<div class="education-list">
-
-
-<div class="education-item">
-
-<div class="education-date">
-University
-</div>
-
-<div>
-
-<div class="education-school">
-Ewha Womans University
-</div>
-
-<div class="education-detail">
-History & Sociology
-</div>
-
-</div>
-
-</div>
-
-
-
-<div class="education-item">
-
-<div class="education-date">
-Jan 2024 — Apr 2024
-</div>
-
-<div>
-
-<div class="education-school">
-The University of British Columbia
-</div>
-
-<div class="education-detail">
-Exchange Student · International Law Club · Human Rights, Refugees & Territorial Disputes
-</div>
-
-</div>
-
-</div>
-
-
-
-<div class="education-item">
-
-<div class="education-date">
-July 2025
-</div>
-
-<div>
-
-<div class="education-school">
-The University of Edinburgh
-</div>
-
-<div class="education-detail">
-Language Training & International Project
-</div>
-
-</div>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- EXPERIENCE -->
-
-<section id="experience">
-
-<div class="container">
-
-<div class="section-label">
-04 / Experience
-</div>
-
-<h2 class="section-title">
-Experience
-</h2>
-
-
-<div class="experience-list">
-
-
-<div class="experience-item">
-
-<div class="experience-date">
-July 2025
-</div>
-
-<div>
-
-<div class="experience-title">
-International Project
-</div>
-
-<div class="experience-org">
-The University of Edinburgh
-</div>
-
-<div class="experience-description">
-Worked as the leader of a five-person team on a bilingual project about mobility rights and accessibility. Conducted interviews and produced a short video in Korean and English.
-</div>
-
-</div>
-
-</div>
-
-
-
-<div class="experience-item">
-
-<div class="experience-date">
-Jan 2025 — Feb 2025
-</div>
-
-<div>
-
-<div class="experience-title">
-Editorial Intern
-</div>
-
-<div class="experience-org">
-CNN
-</div>
-
-<div class="experience-description">
-Monitored Korean and international news, prepared English news summaries, conducted research and supported reporting related to Korea for international audiences.
-</div>
-
-</div>
-
-</div>
-
-
-
-<div class="experience-item">
-
-<div class="experience-date">
-Feb 2023 — Dec 2023
-</div>
-
-<div>
-
-<div class="experience-title">
-Reporter
-</div>
-
-<div class="experience-org">
-Supreme Prosecutors' Office of Korea
-</div>
-
-<div class="experience-description">
-Covered and researched legal and social issues through a reporter program.
-</div>
-
-</div>
-
-</div>
-
-
-
-<div class="experience-item">
-
-<div class="experience-date">
-Aug 2022 — Jan 2023
-</div>
-
-<div>
-
-<div class="experience-title">
-University Reporter
-</div>
-
-<div class="experience-org">
-Ewha Womans University
-</div>
-
-<div class="experience-description">
-Reported on university and student-related issues and produced written content.
-</div>
-
-</div>
-
-</div>
-
-
-
-<div class="experience-item">
-
-<div class="experience-date">
-Aug 2022 — Dec 2022
-</div>
-
-<div>
-
-<div class="experience-title">
-Media & Fact-Checking Program
-</div>
-
-<div class="experience-org">
-Media & Fact-Checking Activities
-</div>
-
-<div class="experience-description">
-Conducted interviews and research on fact-checking topics and produced media content.
-</div>
-
-</div>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- ARTICLES -->
-
-<section id="articles">
-
-<div class="container">
-
-
-<div class="articles-header">
-
-<div>
-
-<div class="section-label">
-05 / Articles
-</div>
-
-<h2 class="section-title">
-Selected work
-</h2>
-
-</div>
-
-<div
-class="article-count"
-id="articleCount">
-Loading...
-</div>
-
-</div>
-
-
-
-<div class="article-controls">
-
-<div class="search-box">
-
-<input
-type="text"
-id="searchInput"
-placeholder="Search articles..."
-autocomplete="off">
-
-</div>
-
-
-<div
-class="category-list"
-id="categoryList">
-</div>
-
-</div>
-
-
-
-<div
-class="articles-list"
-id="articlesList">
-
-<div class="loading">
-Loading articles...
-</div>
-
-</div>
-
-
-<div
-class="no-results"
-id="noResults">
-No articles found.
-</div>
-
-
-<div
-class="pagination"
-id="pagination">
-</div>
-
-
-</div>
-
-</section>
-
-
-
-<!-- CONTACT -->
-
-<section
-id="contact"
-class="contact-section">
-
-<div class="container">
-
-
-<div class="section-label">
-06 / Contact
-</div>
-
-<h2 class="section-title">
-Let's talk.
-</h2>
-
-
-<div class="contact-grid">
-
-
-<div class="contact-card">
-
-<div class="contact-label">
-Email
-</div>
-
-<a
-href="mailto:jyoungseon8@gmail.com"
-class="contact-link">
-jyoungseon8@gmail.com
-</a>
-
-</div>
-
-
-
-<div class="contact-card">
-
-<div class="contact-label">
-LinkedIn
-</div>
-
-<a
-href="https://www.linkedin.com/in/youngseon/"
-target="_blank"
-rel="noopener noreferrer"
-class="contact-link">
-linkedin.com/in/youngseon
-</a>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-</main>
-
-
-
-<footer>
-
-<div class="container">
-
-<div class="footer-inner">
-
-<div>
-© 2026 Youngseon Jung
-</div>
-
-<div>
-Journalist Portfolio
-</div>
-
-</div>
-
-</div>
-
-</footer>
-
-
-
-<script>
-
-const ARTICLES_PER_PAGE=8;
-
-let allArticles=[];
-let filteredArticles=[];
-let currentPage=1;
-let currentCategory="All";
-let currentSearch="";
-
-
-const articlesList=
-document.getElementById("articlesList");
-
-const categoryList=
-document.getElementById("categoryList");
-
-const pagination=
-document.getElementById("pagination");
-
-const searchInput=
-document.getElementById("searchInput");
-
-const articleCount=
-document.getElementById("articleCount");
-
-const noResults=
-document.getElementById("noResults");
-
-const featuredGrid=
-document.getElementById("featuredGrid");
-
-
-
-async function loadArticles(){
-
-try{
-
-const response=
-await fetch("./articles.json");
-
-if(!response.ok)
-throw new Error(
-"articles.json could not be loaded."
-);
-
-allArticles=
-await response.json();
-
-
-allArticles.sort(
-(a,b)=>
-String(b.date||"")
-.localeCompare(
-String(a.date||"")
-)
-);
-
-
-filteredArticles=
-[...allArticles];
-
-
-createCategoryButtons();
-
-renderFeaturedArticles();
-
-renderArticles();
-
-
-}
-
-catch(error){
-
-console.error(error);
-
-
-articlesList.innerHTML=
-'<div class="loading">Articles could not be loaded.<br><small>Make sure articles.json is in the same folder as index.html.</small></div>';
-
-
-articleCount.textContent=
-"Error loading articles.";
-
-}
-
-}
-
-
-
-/* FEATURED ARTICLES */
-
-function renderFeaturedArticles(){
-
-
-let featured=
-
-allArticles
-.filter(
-a=>a.featured===true
-)
-.sort(
-(a,b)=>
-String(b.date||"")
-.localeCompare(
-String(a.date||"")
-)
-)
-.slice(0,3);
-
-
-/*
-If you have not yet added featured:true
-to articles.json,
-the CNN representative work is shown automatically here.
-*/
-
-
-if(featured.length===0){
-
-featured=[
-
-{
-
-title:
-"Choi Mal-ja retrial and acquittal",
-
-url:
-"https://edition.cnn.com/world/asia/south-korea-woman-rape-retrial-intl-hnk-dst",
-
-date:
-"2025-02-01",
-
-outlet:
-"CNN",
-
-category:
-"Society",
-
-image:
-"",
-
-description:
-"CNN reporting on the retrial and acquittal of Choi Mal-ja."
-
-}
-
-];
-
-}
-
-
-
-featuredGrid.innerHTML=
-
-featured.map(
-(article,index)=>{
-
-
-const image=
-
-article.image
-
-?
-
-`<div class="featured-image">
-<img
-src="${escapeAttribute(article.image)}"
-alt="${escapeAttribute(article.title||"")}"
-loading="lazy">
-</div>`
-
-:
-
-`<div class="featured-image"></div>`;
-
-
-const link=
-
-article.url
-
-?
-
-`<a
-href="${escapeAttribute(article.url)}"
-target="_blank"
-rel="noopener noreferrer"
-class="featured-link">
-Read Article →
-</a>`
-
-:
-
-"";
-
-
-return `
-
-<article class="featured-card">
-
-${image}
-
-<div class="featured-number">
-0${index+1}
-</div>
-
-<div class="featured-meta">
-${escapeHTML(article.outlet||article.category||"Journalism")}
-·
-${formatDate(article.date)}
-</div>
-
-<h3 class="featured-title">
-${escapeHTML(article.title||"")}
-</h3>
-
-${
-article.description
-?
-`<p class="featured-description">
-${escapeHTML(article.description)}
-</p>`
-:
-""
-}
-
-${link}
-
-</article>
-
-`;
-
-}
-
-).join("");
-
-}
-
-
-
-/* CATEGORY BUTTONS */
-
-function createCategoryButtons(){
-
-const categories=[
-"All",
-...new Set(
-allArticles
-.map(a=>a.category)
-.filter(Boolean)
-)
-];
-
-
-categoryList.innerHTML="";
-
-
-categories.forEach(
-category=>{
-
-const button=
-document.createElement("button");
-
-button.className=
-"category-btn";
-
-
-if(category==="All")
-button.classList.add("active");
-
-
-button.textContent=
-category;
-
-
-button.addEventListener(
-"click",
-()=>{
-
-currentCategory=
-category;
-
-currentPage=1;
-
-
-document
-.querySelectorAll(
-".category-btn"
-)
-.forEach(
-btn=>
-btn.classList.remove(
-"active"
-)
-);
-
-
-button.classList.add(
-"active"
-);
-
-
-filterArticles();
-
-}
-
-);
-
-
-categoryList.appendChild(
-button
-);
-
-}
-
-);
-
-}
-
-
-
-/* SEARCH */
-
-searchInput.addEventListener(
-"input",
-function(){
-
-currentSearch=
-this.value
-.trim()
-.toLowerCase();
-
-
-currentPage=1;
-
-filterArticles();
-
-}
-);
-
-
-
-/* FILTER */
-
-function filterArticles(){
-
-filteredArticles=
-
-allArticles.filter(
-article=>{
-
-
-const matchesCategory=
-
-currentCategory==="All" ||
-article.category===currentCategory;
-
-
-const searchableText=
 
 [
-article.title,
-article.description,
-article.outlet,
-article.category,
-...(article.tags||[])
+  {
+    "id": 1,
+    "title": "APR targets W500b in Europe as Amazon, Sephora sales surge",
+    "url": "https://koreaherald.com",
+    "date": "2026-08-19",
+    "category": "Business",
+    "content": "Check reference requirements: Currency formatting guidelines apply for title amounts. Avoid abbreviations in the text where possible."
+  },
+  {
+    "id": 2,
+    "title": "US Ambassador meets AmCham leaders in first business talks",
+    "url": "https://koreaherald.com",
+    "date": "2026-08-20",
+    "category": "Business",
+    "content": "Review AmCham casing protocol. Ensure proper photo captions (who, where, when) and structured bilateral reporting frameworks."
+  },
+  {
+    "id": 3,
+    "title": "Hugel’s Wellage lands at Sephora US",
+    "url": "https://koreaherald.com",
+    "date": "2026-08-20",
+    "category": "Business",
+    "content": "Corporate naming conventions and formatting guidelines applied. Structured with specific listing layouts for North American launch data."
+  },
+  {
+    "id": 4,
+    "title": "Paik’s Coffee opens first two stores in Tokyo",
+    "url": "https://koreaherald.com",
+    "date": "2026-08-20",
+    "category": "Business",
+    "content": "Verify numeric decimals for currency valuations. Managed under expanded global market structuring protocols for international expansion."
+  },
+  {
+    "id": 5,
+    "title": "Doosan Enerbility wins W930b contract for Oman power plant",
+    "url": "https://koreaherald.com",
+    "date": "2026-08-21",
+    "category": "Business",
+    "content": "Official contract details for Oman power grid infrastructure development project."
+  },
+  {
+    "id": 6,
+    "title": "Coway expands B2B push with tailored appliance care",
+    "url": "https://koreaherald.com",
+    "date": "2026-08-24",
+    "category": "Business",
+    "content": "Optimized B2B enterprise positioning metrics. Streamlined paragraph text blocks for focused corporate brand narrative."
+  },
+  {
+    "id": 7,
+    "title": "Simmons teams up with Posco, Kiswire on mattress materials",
+    "url": "https://koreaherald.com",
+    "date": "2026-08-25",
+    "category": "Business",
+    "content": "Trilateral industry collaboration workflow framework. Applied specific punctuation syntax and branding casing rules."
+  },
+  {
+    "id": 8,
+    "title": "Hyundai Steel targets AI data center demand with HanmiGlobal",
+    "url": "https://koreaherald.com",
+    "date": "2026-08-25",
+    "category": "Business",
+    "content": "Joint technical memorandum parameters. Industrial focus metrics shifted from raw corporate entities to advanced system infrastructure sectors."
+  },
+  {
+    "id": 9,
+    "title": "HanmiGlobal ranks sixth among global project managers",
+    "url": "https://koreaherald.com",
+    "date": "2026-08-26",
+    "category": "Business",
+    "content": "ENR survey analysis tracking. Fully expanded cardinal numbering format values applied across dataset rankings."
+  },
+  {
+    "id": 10,
+    "title": "LS Cable units hit records on AI infrastructure boom",
+    "url": "https://koreaherald.com",
+    "date": "2026-08-26",
+    "category": "Business",
+    "content": "Financial performance logs mapping cable and subsea operations. Time-period description rules customized to avoid text repetition."
+  },
+  {
+    "id": 11,
+    "title": "Posco documentary spotlights steel’s second life",
+    "url": "https://koreaherald.com",
+    "date": "2026-08-26",
+    "category": "Business",
+    "content": "Media campaign tracking logs. Modified description parameters regarding transformation elements and investment syntax rules."
+  },
+  {
+    "id": 12,
+    "title": "Daewoong secures US patent allowance for anti-aging mRNA technology",
+    "url": "https://koreaherald.com",
+    "date": "2026-08-27",
+    "category": "Business",
+    "content": "Biotech system patent tracking metadata. Maintained full contextual density instructions for high-priority technical data."
+  },
+  {
+    "id": 13,
+    "title": "Musinsa takes Japan momentum into China, Southeast Asia",
+    "url": "https://koreaherald.com",
+    "date": "2026-08-27",
+    "category": "Business",
+    "content": "Global fashion distribution infrastructure layout. Merged specified block parameters for unified market summary metrics."
+  },
+  {
+    "id": 14,
+    "title": "GM Korea boosts repair capacity at 380 service centers",
+    "url": "https://koreaherald.com",
+    "date": "2026-08-27",
+    "category": "Business",
+    "content": "Service network listing validation framework checking structured structural format compliance."
+  },
+  {
+    "id": 15,
+    "title": "AbTis wins US patent challenge from Ajinomoto",
+    "url": "https://koreaherald.com",
+    "date": "2026-08-28",
+    "category": "Business",
+    "content": "Legal patent challenge data tracking metrics."
+  },
+  {
+    "id": 16,
+    "title": "AREX upgrades Seoul Station City Airport Terminal for passenger convenience",
+    "url": "https://koreaherald.com",
+    "date": "2026-08-28",
+    "category": "Business",
+    "content": "Transit systems facility logging rules. Applied sentence-level past-tense modifications and fully expanded percentage metrics."
+  },
+  {
+    "id": 17,
+    "title": "Cosmax joins launch of Indonesia’s first cosmetics science program",
+    "url": "https://koreaherald.com",
+    "date": "2026-08-28",
+    "category": "Business",
+    "content": "Academic enterprise partnership data log."
+  },
+  {
+    "id": 18,
+    "title": "Dunamu partners with Visa on next-generation financial services",
+    "url": "https://koreaherald.com",
+    "date": "2026-08-28",
+    "category": "Business",
+    "content": "Fintech alliance profile matrix. Incorporates precise provider descriptors and corporate structure classifications."
+  },
+  {
+    "id": 19,
+    "title": "Innocean lands Five Guys, California Lottery as US clients",
+    "url": "https://koreaherald.com",
+    "date": "2026-08-31",
+    "category": "Business",
+    "content": "Advertising client mapping rules. Filtered unnecessary regional hub naming details out of the text layout parameters."
+  },
+  {
+    "id": 20,
+    "title": "Musinsa posts record earnings on offline, global expansion",
+    "url": "https://koreaherald.com",
+    "date": "2026-08-31",
+    "category": "Business",
+    "content": "Retail financial growth metrics. Strict formatting rules applied regarding raw text conversion of percentage indicators."
+  },
+  {
+    "id": 21,
+    "title": "LS Cable targets AI data center infrastructure with superconducting technology",
+    "url": "https://koreaherald.com",
+    "date": "2026-09-01",
+    "category": "Business",
+    "content": "Superconducting tech framework integration notes for data centers."
+  },
+  {
+    "id": 22,
+    "title": "JungKwanJang retains global ginseng crown",
+    "url": "https://koreaherald.com",
+    "date": "2026-09-01",
+    "category": "Business",
+    "content": "Market leadership data reports tracking international distribution paths."
+  },
+  {
+    "id": 23,
+    "title": "Posco chief calls for stronger Korea-Australia resource ties",
+    "url": "https://koreaherald.com",
+    "date": "2026-09-02",
+    "category": "Business",
+    "content": "Bilateral mining and raw materials logistics deployment maps."
+  },
+  {
+    "id": 24,
+    "title": "Gaon Cable targets AI data centers with low-friction cables",
+    "url": "https://koreaherald.com",
+    "date": "2026-09-02",
+    "category": "Business",
+    "content": "Product pipeline parameters for industrial spaces. Applied alternative corporate speech tag alternatives and expanded shorthand strings."
+  },
+  {
+    "id": 25,
+    "title": "BBQ chief bets on AI for global expansion",
+    "url": "https://koreaherald.com",
+    "date": "2026-09-02",
+    "category": "Business",
+    "content": "Franchise network optimization using automated layout algorithms."
+  },
+  {
+    "id": 26,
+    "title": "Dongkuk Steel takes young architects on UK study tour",
+    "url": "https://koreaherald.com",
+    "date": "2026-09-03",
+    "category": "Business",
+    "content": "Educational project reporting structure rules. Applied timeline shortening formats and sentence action modifications."
+  },
+  {
+    "id": 27,
+    "title": "Golfzon names 20 Korean finalists for China Open final",
+    "url": "https://koreaherald.com",
+    "date": "2026-09-03",
+    "category": "Business",
+    "content": "Tournament competitor metadata maps."
+  },
+  {
+    "id": 28,
+    "title": "Hyundai Mobis starts EV powertrain production in Slovakia",
+    "url": "https://koreaherald.com",
+    "date": "2026-09-03",
+    "category": "Business",
+    "content": "Automotive facility rollout logs. Optimized contextual clauses to minimize redundancy across output value metrics."
+  },
+  {
+    "id": 29,
+    "title": "Devsisters expands CookieRun Card Game into Europe",
+    "url": "https://koreaherald.com",
+    "date": "2026-09-04",
+    "category": "Business",
+    "content": "Gaming IP distribution logs across Western markets."
+  },
+  {
+    "id": 30,
+    "title": "Kolmar Korea brings K-beauty colors to Paris fashion fair",
+    "url": "https://koreaherald.com",
+    "date": "2026-09-04",
+    "category": "Business",
+    "content": "International exposition tracking maps. Pruned unnecessary textual elements and utilized global location headers."
+  },
+  {
+    "id": 31,
+    "title": "LG to showcase AI technologies at Spark 2026",
+"url": "koreaherald.com",
+"date": "2026-09-04",
+"category": "Business",
+"content": "Corporate technology roadmap presentation parameters."
+},
+{
+"id": 32,
+"title": "CJ CheilJedang sets Singapore hub for APAC seasoning business",
+"url": "koreaherald.com",
+"date": "2026-09-07",
+"category": "Business",
+"content": "Regional market operations data logistics profile."
+},
+{
+"id": 33,
+"title": "LG Energy Solution develops technology to boost LMR battery life",
+"url": "koreaherald.com",
+"date": "2026-09-07",
+"category": "Business",
+"content": "Chemical processing R&D data tracking sheets."
+},
+{
+"id": 34,
+"title": "HK inno.N secures world's first EPD for oral medicine",
+"url": "koreaherald.com",
+"date": "2026-09-07",
+"category": "Business",
+"content": "Regulatory compliance validation certification metadata."
+},
+{
+"id": 35,
+"title": "Hyosung bets on AI power boom with US grid expansion",
+"url": "koreaherald.com",
+"date": "2026-09-08",
+"category": "Business",
+"content": "Heavy electrical infrastructure tracking logs. Applied fully expanded technical terms for voltages and currents upon initial occurrence."
+},
+{
+"id": 36,
+"title": "Gaon Cable makes Canadian debut with utility deal",
+"url": "koreaherald.com",
+"date": "2026-09-09",
+"category": "Business",
+"content": "Market expansion mapping systems. Requires early geographic identification anchors followed by legacy capability logs."
+},
+{
+"id": 37,
+"title": "GS Caltex to supply DHL Express with 2,000 tons of SAF",
+"url": "koreaherald.com",
+"date": "2026-09-09",
+"category": "Business",
+"content": "Sustainable logistics operations framework matrices. Applied preferred market-presence strings and modular initiative indicators."
+},
+{
+"id": 38,
+"title": "Lotte seeks local expertise at Indonesia job fair",
+"url": "koreaherald.com",
+"date": "2026-09-09",
+"category": "Business",
+"content": "International human resource procurement tracker data."
+},
+{
+"id": 39,
+"title": "Celltrion steps up European push for asthma drug Omlyclo",
+"url": "koreaherald.com",
+"date": "2026-09-10",
+"category": "Business",
+"content": "Pharmaceutical asset deployment logs. Streamlined geographic strings and embedded baseline material summaries within caption layouts."
+},
+{
+"id": 40,
+"title": "KFC Korea expands regional partnership with Taiwan, Hong Kong",
+"url": "koreaherald.com",
+"date": "2026-09-10",
+"category": "Business",
+"content": "Franchise territory supply network validation matrix."
+},
+{
+"id": 41,
+"title": "APR expands Medicube’s global footprint with pop-up tour",
+"url": "koreaherald.com",
+"date": "2026-09-10",
+"category": "Business",
+"content": "Experiential consumer marketing project dataset logs."
+},
+{
+"id": 42,
+"title": "CJ takes bibigo rice campaign to Times Square",
+"url": "koreaherald.com",
+"date": "2026-09-10",
+"category": "Business",
+"content": "High-visibility branding execution framework. Repositioned alternative digital marketing channels into prime introductory strings."
+},
+{
+"id": 43,
+"title": "HD Hyundai advances shipbuilding initiatives at Gastech 2026",
+"url": "koreaherald.com",
+"date": "2026-09-13",
+"category": "Business",
+"content": "Maritime industrial engineering project registry logs."
+},
+{
+"id": 44,
+"title": "Chong Kun Dang builds W2.2tr biopharma center in Siheung",
+"url": "koreaherald.com",
+"date": "2026-09-13",
+"category": "Business",
+"content": "Manufacturing complex asset valuation tracking metrics."
+},
+{
+"id": 45,
+"title": "LG CNS wins recognition for Indonesia’s Coretax platform",
+"url": "koreaherald.com",
+"date": "2026-09-14",
+"category": "Business",
+"content": "Enterprise public-sector software deployment profiles. Uses raw text abbreviation tags and hierarchical information sequencing structures."
+},
+{
+"id": 46,
+"title": "Nongshim takes Shin Ramyun to UAE Comic Con",
+"url": "koreaherald.com",
+"date": "2026-09-14",
+"category": "Business",
+"content": "Brand representation strategy logs. Incorporates structural anchors defining flagship elements and sentence-order modifiers."
+},
+{
+"id": 47,
+"title": "HD Hyundai takes AI power generation offshore",
+"url": "koreaherald.com",
+"date": "2026-09-15",
+"category": "Business",
+"content": "Offshore automated energy management logs."
+},
+{
+"id": 48,
+"title": "K-water advances in W1tr Philippine smart city project",
+"url": "koreaherald.com",
+"date": "2026-09-15",
+"category": "Business",
+"content": "Infrastructure funding tracker metrics across international development regions."
+},
+{
+"id": 49,
+"title": "Samsung SDS becomes Anthropic’s first Korean Select partner",
+"url": "koreaherald.com",
+"date": "2026-09-15",
+"category": "Business",
+"content": "Cloud service integration partnership notes. Simplifies basic human caption descriptors and repeats location preposition tags."
+},
+{
+"id": 50,
+"title": "Woori’s prepaid travel card draws 10,000 foreign users",
+"url": "koreaherald.com",
+"date": "2026-09-16",
+"category": "Business",
+"content": "Fintech consumer subscription growth analytics metadata."
+},
+{
+"id": 51,
+"title": "CU opens industry’s largest logistics center in Busan",
+"url": "koreaherald.com",
+"date": "2026-09-16",
+"category": "Business",
+"content": "Distribution center physical dimensions database logs. Applied mathematical rounding operations across fractional space values."
+},
+{
+"id": 52,
+"title": "Foreign shoppers power Musinsa Beauty’s strong Hongdae debut",
+"url": "koreaherald.com",
+"date": "2026-09-16",
+"category": "Business",
+"content": "Retail foot-traffic revenue analytic trackers."
+},
+{
+"id": 53,
+"title": "Alteogen seeks patent for long-acting obesity drug platform",
+"url": "koreaherald.com",
+"date": "2026-09-17",
+"category": "Business",
+"content": "Bio-pharmaceutical intellectual property documentation logs."
+},
+{
+"id": 54,
+"title": "Beyond Seoul, local districts tap K-culture to attract tourists",
+"url": "koreaherald.com",
+"date": "2026-09-18",
+"category": "Business",
+"content": "Regional administrative tourism development program reviews."
+},
+{
+"id": 55,
+"title": "Welcron launches defense website to expand overseas business",
+"url": "koreaherald.com",
+"date": "2026-09-21",
+"category": "Business",
+"content": "E-commerce platform deployment specifications for global defense procurement markets."
+}
 ]
-.join(" ")
-.toLowerCase();
 
 
-return
-matchesCategory &&
-searchableText.includes(
-currentSearch
-);
-
-}
-
-);
-
-
-renderArticles();
-
-}
-
-
-
-/* ARTICLES */
-
-function renderArticles(){
-
-const totalArticles=
-filteredArticles.length;
-
-
-articleCount.textContent=
-`${totalArticles} ${
-totalArticles===1
-?"article"
-:"articles"
-}`;
-
-
-if(totalArticles===0){
-
-articlesList.innerHTML="";
-
-noResults.style.display=
-"block";
-
-pagination.innerHTML="";
-
-return;
-
-}
-
-
-noResults.style.display=
-"none";
-
-
-const totalPages=
-Math.ceil(
-totalArticles /
-ARTICLES_PER_PAGE
-);
-
-
-if(currentPage>totalPages)
-currentPage=totalPages;
-
-
-const startIndex=
-(currentPage-1) *
-ARTICLES_PER_PAGE;
-
-
-const pageArticles=
-
-filteredArticles.slice(
-startIndex,
-startIndex+
-ARTICLES_PER_PAGE
-);
-
-
-
-articlesList.innerHTML=
-
-pageArticles
-.map(
-(article,index)=>{
-
-
-const tags=
-
-(article.tags||[])
-.map(
-tag=>
-`<span class="article-tag">
-${escapeHTML(tag)}
-</span>`
-)
-.join("");
-
-
-const link=
-
-article.url
-
-?
-
-`<a
-href="${escapeAttribute(article.url)}"
-target="_blank"
-rel="noopener noreferrer"
-class="article-link">
-Read Article →
-</a>`
-
-:
-
-"";
-
-
-return `
-
-<article class="article-card">
-
-<div class="article-number">
-${String(
-startIndex+
-index+
-1
-).padStart(2,"0")}
-</div>
-
-
-<div>
-
-<div class="article-category">
-${escapeHTML(
-article.category||
-"Article"
-)}
-</div>
-
-
-<h3 class="article-title">
-${escapeHTML(
-article.title||
-""
-)}
-</h3>
-
-
-${
-article.description
-
-?
-
-`<p class="article-description">
-${escapeHTML(
-article.description
-)}
-</p>`
-
-:
-
-""
-}
-
-
-${
-tags
-
-?
-
-`<div class="article-tags">
-${tags}
-</div>`
-
-:
-
-""
-}
-
-
-${link}
-
-</div>
-
-
-<div class="article-meta">
-
-<div class="article-outlet">
-${escapeHTML(
-article.outlet||
-""
-)}
-</div>
-
-<div>
-${formatDate(
-article.date
-)}
-</div>
-
-</div>
-
-
-</article>
-
-`;
-
-}
-)
-.join("");
-
-
-renderPagination(
-totalPages
-);
-
-}
-
-
-
-/* PAGINATION */
-
-function renderPagination(
-totalPages
-){
-
-pagination.innerHTML="";
-
-
-if(totalPages<=1)
-return;
-
-
-
-const previous=
-document.createElement(
-"button"
-);
-
-previous.className=
-"page-btn";
-
-previous.textContent="←";
-
-previous.disabled=
-currentPage===1;
-
-
-previous.addEventListener(
-"click",
-()=>{
-
-if(currentPage>1){
-
-currentPage--;
-
-renderArticles();
-
-scrollToArticles();
-
-}
-
-}
-);
-
-
-pagination.appendChild(
-previous
-);
-
-
-
-for(
-let page=1;
-page<=totalPages;
-page++
-){
-
-const button=
-document.createElement(
-"button"
-);
-
-button.className=
-"page-btn";
-
-button.textContent=
-page;
-
-
-if(page===currentPage)
-button.classList.add(
-"active"
-);
-
-
-button.addEventListener(
-"click",
-()=>{
-
-currentPage=
-page;
-
-renderArticles();
-
-scrollToArticles();
-
-}
-);
-
-
-pagination.appendChild(
-button
-);
-
-}
-
-
-
-const next=
-document.createElement(
-"button"
-);
-
-next.className=
-"page-btn";
-
-next.textContent="→";
-
-next.disabled=
-currentPage===totalPages;
-
-
-next.addEventListener(
-"click",
-()=>{
-
-if(
-currentPage<
-totalPages
-){
-
-currentPage++;
-
-renderArticles();
-
-scrollToArticles();
-
-}
-
-}
-);
-
-
-pagination.appendChild(
-next
-);
-
-}
-
-
-
-/* DATE */
-
-function formatDate(
-dateString
-){
-
-if(!dateString)
-return"";
-
-
-const parts=
-String(dateString).split("-");
-
-
-if(parts.length!==3)
-return dateString;
-
-
-const year=
-parts[0];
-
-const month=
-Number(parts[1]);
-
-const day=
-Number(parts[2]);
-
-
-const months=[
-"Jan",
-"Feb",
-"Mar",
-"Apr",
-"May",
-"Jun",
-"Jul",
-"Aug",
-"Sep",
-"Oct",
-"Nov",
-"Dec"
-];
-
-
-if(
-!year ||
-!month ||
-!day ||
-month<1 ||
-month>12
-)
-return dateString;
-
-
-return `${months[month-1]} ${day}, ${year}`;
-
-}
-
-
-
-/* SCROLL */
-
-function scrollToArticles(){
-
-document
-.getElementById("articles")
-.scrollIntoView({
-behavior:"smooth"
-});
-
-}
-
-
-
-/* SECURITY */
-
-function escapeHTML(
-value
-){
-
-return String(value)
-
-.replace(
-/&/g,
-"&amp;"
-)
-
-.replace(
-/</g,
-"&lt;"
-)
-
-.replace(
-/>/g,
-"&gt;"
-)
-
-.replace(
-/"/g,
-"&quot;"
-)
-
-.replace(
-/'/g,
-"&#039;"
-);
-
-}
-
-
-
-function escapeAttribute(
-value
-){
-
-return String(value)
-
-.replace(
-/"/g,
-"&quot;"
-)
-
-.replace(
-/'/g,
-"&#039;"
-);
-
-}
-
-
-
-loadArticles();
-
-</script>
-
-</body>
-</html>
