@@ -1223,10 +1223,13 @@ article.category||
 
 
 <h3 class="article-title">
-${escapeHTML(
-article.title||
-""
-)}
+  <a
+    href="${escapeAttribute(article.url || "#")}"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    ${escapeHTML(article.title || "")}
+  </a>
 </h3>
 
 
