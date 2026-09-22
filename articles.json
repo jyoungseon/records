@@ -124,7 +124,7 @@
     "title": "AREX upgrades Seoul Station City Airport Terminal for passenger convenience",
     "url": "https://www.koreaherald.com/article/10855488",
     "date": "2026-08-28",
-    "category": "Society",
+    "category": "Society & Culture",
     "content": "Transit systems facility logging rules. Applied sentence-level past-tense modifications and fully expanded percentage metrics."
   },
   {
@@ -204,7 +204,7 @@
     "title": "Dongkuk Steel takes young architects on UK study tour",
     "url": "https://www.koreaherald.com/article/10861650",
     "date": "2026-09-03",
-    "category": "Society",
+    "category": "Society & Culture",
     "content": "Educational project reporting structure rules. Applied timeline shortening formats and sentence action modifications."
   },
   {
@@ -212,7 +212,7 @@
     "title": "Golfzon names 20 Korean finalists for China Open final",
     "url": "https://www.koreaherald.com/article/10861651",
     "date": "2026-09-03",
-    "category": "Society",
+    "category": "Society & Culture",
     "content": "Tournament competitor metadata maps."
   },
   {
@@ -428,7 +428,7 @@
 "title": "Beyond Seoul, local districts tap K-culture to attract tourists",
 "url": "https://www.koreaherald.com/article/10878371",
 "date": "2026-09-18",
-"category": "Society",
+"category": "Society & Culture",
 "content": "Regional administrative tourism development program reviews."
 },
 {
@@ -442,9 +442,20 @@
 {
 "id": 56,
   "title": "Choi Mal-ja retrial and acquittal",
+  "url": "https://edition.cnn.com/2025/02/06/style/newjeans-kpop-new-name-hnk-intl",
+  "date": "2025-02-07",
+  "category": "Society & Culture",
+  "content": "Research and reporting support for CNN’s coverage of NewJeans’ new identity and name.",
+  "featured": true,
+  "image": "images/njz.jpg",
+  "showInArticles": false
+},
+{
+"id": 57,
+  "title": "Choi Mal-ja retrial and acquittal",
   "url": "https://edition.cnn.com/world/asia/south-korea-woman-rape-retrial-intl-hnk-dst",
   "date": "2025-04-12",
-  "category": "Society",
+  "category": "Society & Culture",
   "content": "CNN reporting on the retrial and acquittal of Choi Mal-ja.",
   "featured": true,
   "image": "images/cmj.jpg",
