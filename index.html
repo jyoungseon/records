@@ -751,8 +751,12 @@ async function loadArticles(){
 
 try{
 
-const response=
-await fetch("./articles.json");
+const response = await fetch(
+  `./articles.json?v=${Date.now()}`,
+  {
+    cache: "no-store"
+  }
+);
 
 if(!response.ok)
 throw new Error(
@@ -772,8 +776,11 @@ String(a.date||"")
 );
 
 
-filteredArticles=
-[...allArticles];
+filteredArticles =
+  allArticles.filter(
+    article =>
+      article.showInArticles !== false
+  );
 
 
 createCategoryButtons();
